@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KN-RBSET 2026 - Kompetisi Rancang Bangun Sistem Energi Terbarukan</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -40,20 +42,20 @@
             }
         }
     </script>
-    
+
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: #F0F4F1;
             color: #1A201C;
         }
-        
+
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
-        
+
         .animate-on-scroll.is-visible {
             opacity: 1;
             transform: translateY(0);
@@ -81,57 +83,77 @@
         }
     </style>
 </head>
+
 <body class="min-h-screen flex flex-col antialiased selection:bg-accent-soft selection:text-primary">
 
     <!-- Header / Navigation Bar -->
-    <header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b-2 border-primary/10 border-t-4 border-t-primary shadow-sm transition-all duration-300">
+    <header
+        class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b-2 border-primary/10 shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            
+
             <!-- Logo -->
             <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white font-extrabold text-lg shadow-md group-hover:bg-primary-hover group-hover:scale-105 transition-all ring-2 ring-primary/20">
-                    <i class="fa-solid fa-leaf text-base"></i>
-                </div>
+                <!-- KODE BARU (Menggunakan Gambar Sendiri) -->
+                <img src="src/Assets/lktiprodi.png" alt="Logo KN-RBSET" class="w-10 h-10 object-contain rounded-xl">
                 <div class="flex flex-col">
                     <span class="font-extrabold text-lg text-primary leading-none tracking-tight">KN-RBSET</span>
-                    <span class="text-[10px] font-bold text-primary/70 tracking-wider uppercase mt-0.5">Kompetisi EBT 2026</span>
+                    <span class="text-[10px] font-bold text-primary/70 tracking-wider uppercase mt-0.5">Kompetisi EBT
+                        2026</span>
                 </div>
             </a>
 
             <!-- Desktop Menu Navigation -->
-            <nav class="hidden md:flex items-center gap-1 bg-accent-soft/70 p-1.5 rounded-2xl border border-border-subtle">
-                <a href="#beranda" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Beranda</a>
-                <a href="#tentang" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Tentang</a>
-                <a href="#subtema" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Subtema</a>
-                <a href="#timeline" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Timeline</a>
-                <a href="#unduhan" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Panduan</a>
-                <a href="#faq" class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">FAQ</a>
+            <nav
+                class="hidden md:flex items-center gap-1 bg-accent-soft/70 p-1.5 rounded-2xl border border-border-subtle">
+                <a href="#beranda"
+                    class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Beranda</a>
+                <a href="#tentang"
+                    class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Tentang</a>
+                <a href="#subtema"
+                    class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Subtema</a>
+                <a href="#timeline"
+                    class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Timeline</a>
+                <a href="#unduhan"
+                    class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">Panduan</a>
+                <a href="#faq"
+                    class="px-4 py-2 rounded-xl text-sm font-semibold text-text-primary hover:bg-primary hover:text-white transition-all duration-200">FAQ</a>
             </nav>
 
             <!-- CTA Button External Link -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-extrabold text-sm shadow-md shadow-primary/20 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
+                <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer"
+                    class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-xl font-extrabold text-sm shadow-md shadow-primary/20 hover:-translate-y-0.5 transition-all duration-200 flex items-center gap-2">
                     <span>Daftar Tim</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                 </a>
             </div>
 
             <!-- Mobile Menu Toggle Button -->
-            <button onclick="toggleMobileMenu()" id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-primary hover:bg-accent-soft focus:outline-none" aria-label="Toggle Menu">
+            <button onclick="toggleMobileMenu()" id="mobile-menu-btn"
+                class="md:hidden p-2 rounded-lg text-primary hover:bg-accent-soft focus:outline-none"
+                aria-label="Toggle Menu">
                 <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
             </button>
         </div>
 
         <!-- Mobile Menu Container -->
-        <div id="mobile-menu" class="hidden md:hidden bg-surface border-b border-border-subtle px-4 pt-2 pb-6 space-y-3">
-            <a href="#beranda" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Beranda</a>
-            <a href="#tentang" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Tentang</a>
-            <a href="#subtema" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Subtema</a>
-            <a href="#timeline" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Timeline</a>
-            <a href="#unduhan" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Panduan</a>
-            <a href="#faq" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">FAQ</a>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-surface border-b border-border-subtle px-4 pt-2 pb-6 space-y-3">
+            <a href="#beranda" onclick="toggleMobileMenu()"
+                class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Beranda</a>
+            <a href="#tentang" onclick="toggleMobileMenu()"
+                class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Tentang</a>
+            <a href="#subtema" onclick="toggleMobileMenu()"
+                class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Subtema</a>
+            <a href="#timeline" onclick="toggleMobileMenu()"
+                class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Timeline</a>
+            <a href="#unduhan" onclick="toggleMobileMenu()"
+                class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">Panduan</a>
+            <a href="#faq" onclick="toggleMobileMenu()"
+                class="block px-3 py-2 rounded-lg text-base font-medium text-text-primary hover:bg-accent-soft hover:text-primary">FAQ</a>
             <div class="pt-2">
-                <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-hover text-white py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2">
+                <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer"
+                    class="w-full bg-primary hover:bg-primary-hover text-white py-3 rounded-xl font-bold text-center flex items-center justify-center gap-2">
                     <span>Daftar Tim Sekarang</span>
                     <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
                 </a>
@@ -144,38 +166,42 @@
         <section id="beranda" class="relative py-16 lg:py-24 overflow-hidden">
             <!-- Background Image dengan Opacity Rendah (Dapat diganti URL gambarnya) -->
             <div class="absolute inset-0 z-0 opacity-10 pointer-events-none select-none">
-                <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1920&q=80" 
-                     alt="Background Energi Terbarukan" 
-                     class="w-full h-full object-cover object-center"
-                     id="hero-bg-img" />
+                <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=1920&q=80"
+                    alt="Background Energi Terbarukan" class="w-full h-full object-cover object-center"
+                    id="hero-bg-img" />
             </div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-center max-w-3xl mx-auto space-y-6">
-                    
+
                     <!-- Badge -->
-                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-soft border border-border-subtle text-primary font-bold text-xs tracking-wide">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent-soft border border-border-subtle text-primary font-bold text-xs tracking-wide">
                         <i class="fa-solid fa-award"></i>
                         <span>Kompetisi Nasional Mahasiswa S1 / D4</span>
                     </div>
 
                     <!-- Main Title -->
-                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight tracking-tight">
+                    <h1
+                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary leading-tight tracking-tight">
                         Kompetisi Rancang Bangun Sistem Energi Terbarukan
                     </h1>
 
                     <!-- Tagline / Subtitle -->
                     <p class="text-base sm:text-lg text-text-muted font-normal leading-relaxed max-w-2xl mx-auto">
-                        Inovasi Mahasiswa Indonesia untuk Masa Depan Energi Berkelanjutan. Wadah nyata unjuk karya sains, teknologi, dan rekayasa EBT.
+                        Inovasi Mahasiswa Indonesia untuk Masa Depan Energi Berkelanjutan. Wadah nyata unjuk karya
+                        sains, teknologi, dan rekayasa EBT.
                     </p>
 
                     <!-- Dual CTA Buttons -->
                     <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-primary hover:bg-primary-hover text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-soft-elevation hover:shadow-card-hover transition-all flex items-center justify-center gap-2">
+                        <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer"
+                            class="w-full sm:w-auto bg-primary hover:bg-primary-hover text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-soft-elevation hover:shadow-card-hover transition-all flex items-center justify-center gap-2">
                             <span>Daftar Sekarang</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
-                        <a href="#unduhan" class="w-full sm:w-auto bg-accent-soft hover:bg-border-subtle text-primary border border-border-subtle px-8 py-3.5 rounded-xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2">
+                        <a href="#unduhan"
+                            class="w-full sm:w-auto bg-accent-soft hover:bg-border-subtle text-primary border border-border-subtle px-8 py-3.5 rounded-xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2">
                             <i class="fa-solid fa-file-pdf text-xs"></i>
                             <span>Unduh Buku Panduan</span>
                         </a>
@@ -183,28 +209,42 @@
 
                     <!-- Live Countdown Card -->
                     <div class="pt-8">
-                        <div class="bg-surface rounded-2xl p-6 sm:p-8 border border-border-subtle shadow-soft-elevation max-w-xl mx-auto">
-                            <p class="text-xs font-bold uppercase tracking-wider text-text-muted mb-4 flex items-center justify-center gap-2">
+                        <div
+                            class="bg-surface rounded-2xl p-6 sm:p-8 border border-border-subtle shadow-soft-elevation max-w-xl mx-auto">
+                            <p
+                                class="text-xs font-bold uppercase tracking-wider text-text-muted mb-4 flex items-center justify-center gap-2">
                                 <i class="fa-regular fa-clock text-primary"></i>
                                 <span>Batas Akhir Pendaftaran Tim: 31 Agustus 2026</span>
                             </p>
-                            
+
                             <div class="grid grid-cols-4 gap-2 sm:gap-4">
-                                <div class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
-                                    <span id="countdown-days" class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
-                                    <span class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Hari</span>
+                                <div
+                                    class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
+                                    <span id="countdown-days"
+                                        class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
+                                    <span
+                                        class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Hari</span>
                                 </div>
-                                <div class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
-                                    <span id="countdown-hours" class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
-                                    <span class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Jam</span>
+                                <div
+                                    class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
+                                    <span id="countdown-hours"
+                                        class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
+                                    <span
+                                        class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Jam</span>
                                 </div>
-                                <div class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
-                                    <span id="countdown-minutes" class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
-                                    <span class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Menit</span>
+                                <div
+                                    class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
+                                    <span id="countdown-minutes"
+                                        class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
+                                    <span
+                                        class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Menit</span>
                                 </div>
-                                <div class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
-                                    <span id="countdown-seconds" class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
-                                    <span class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Detik</span>
+                                <div
+                                    class="bg-bg-main p-3 sm:p-4 rounded-xl border border-border-subtle flex flex-col items-center">
+                                    <span id="countdown-seconds"
+                                        class="text-2xl sm:text-3xl font-extrabold text-primary">00</span>
+                                    <span
+                                        class="text-[10px] sm:text-xs font-semibold text-text-muted uppercase mt-1">Detik</span>
                                 </div>
                             </div>
                         </div>
@@ -218,38 +258,48 @@
         <section id="tentang" class="py-16 bg-surface border-y border-border-subtle">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
+
                     <div class="lg:col-span-7 space-y-6">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
+                        <div
+                            class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
                             <span>Tentang Kompetisi</span>
                         </div>
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
                             Mendorong Akselerasi Transisi Energi Bersih Nasional
                         </h2>
                         <p class="text-sm sm:text-base text-text-muted leading-relaxed">
-                            <strong>KN-RBSET</strong> (Kompetisi Rancang Bangun Sistem Energi Terbarukan) adalah ajang inovasi tingkat nasional yang dirancang khusus untuk memfasilitasi ide kreatif, prototipe, dan rancangan sistem energi masa depan karya mahasiswa perguruan tinggi di seluruh Indonesia.
+                            <strong>KN-RBSET</strong> (Kompetisi Rancang Bangun Sistem Energi Terbarukan) adalah ajang
+                            inovasi tingkat nasional yang dirancang khusus untuk memfasilitasi ide kreatif, prototipe,
+                            dan rancangan sistem energi masa depan karya mahasiswa perguruan tinggi di seluruh
+                            Indonesia.
                         </p>
                         <p class="text-sm sm:text-base text-text-muted leading-relaxed">
-                            Melalui kompetisi ini, peserta diajak untuk memberikan solusi aplikatif terhadap tantangan energi, meningkatkan efisiensi sistem konversi energi terbarukan, serta mendukung target Indonesia menuju Net Zero Emission.
+                            Melalui kompetisi ini, peserta diajak untuk memberikan solusi aplikatif terhadap tantangan
+                            energi, meningkatkan efisiensi sistem konversi energi terbarukan, serta mendukung target
+                            Indonesia menuju Net Zero Emission.
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                             <div class="p-4 rounded-xl bg-bg-main border border-border-subtle flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0 mt-0.5">
                                     <i class="fa-solid fa-users text-sm"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-sm text-text-primary">Format Tim</h4>
-                                    <p class="text-xs text-text-muted mt-0.5">Terdiri dari 3-5 mahasiswa dari universitas yang sama.</p>
+                                    <p class="text-xs text-text-muted mt-0.5">Terdiri dari 3-5 mahasiswa dari
+                                        universitas yang sama.</p>
                                 </div>
                             </div>
                             <div class="p-4 rounded-xl bg-bg-main border border-border-subtle flex items-start gap-3">
-                                <div class="w-8 h-8 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0 mt-0.5">
+                                <div
+                                    class="w-8 h-8 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0 mt-0.5">
                                     <i class="fa-solid fa-graduation-cap text-sm"></i>
                                 </div>
                                 <div>
                                     <h4 class="font-bold text-sm text-text-primary">Jenjang Peserta</h4>
-                                    <p class="text-xs text-text-muted mt-0.5">Mahasiswa aktif program S1 / D4 di Indonesia.</p>
+                                    <p class="text-xs text-text-muted mt-0.5">Mahasiswa aktif program S1 / D4 di
+                                        Indonesia.</p>
                                 </div>
                             </div>
                         </div>
@@ -257,32 +307,39 @@
 
                     <!-- Summary Card -->
                     <div class="lg:col-span-5">
-                        <div class="bg-bg-main p-6 sm:p-8 rounded-2xl border border-border-subtle shadow-soft-elevation space-y-6">
-                            <h3 class="text-lg font-bold text-primary flex items-center gap-2 border-b border-border-subtle pb-4">
+                        <div
+                            class="bg-bg-main p-6 sm:p-8 rounded-2xl border border-border-subtle shadow-soft-elevation space-y-6">
+                            <h3
+                                class="text-lg font-bold text-primary flex items-center gap-2 border-b border-border-subtle pb-4">
                                 <i class="fa-solid fa-circle-info"></i>
                                 <span>Ketentuan Ringkas</span>
                             </h3>
 
                             <div class="space-y-3">
-                                <div class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
+                                <div
+                                    class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
                                     <span class="text-text-muted font-medium">Kategori Peserta</span>
                                     <span class="font-bold text-text-primary">Mahasiswa S1 / D4</span>
                                 </div>
-                                <div class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
+                                <div
+                                    class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
                                     <span class="text-text-muted font-medium">Sifat Kompetisi</span>
                                     <span class="font-bold text-text-primary">Tingkat Nasional</span>
                                 </div>
-                                <div class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
+                                <div
+                                    class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
                                     <span class="text-text-muted font-medium">Anggota Per Tim</span>
                                     <span class="font-bold text-text-primary">3 – 5 Mahasiswa</span>
                                 </div>
-                                <div class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
+                                <div
+                                    class="flex items-center justify-between text-sm py-2 border-b border-border-subtle">
                                     <span class="text-text-muted font-medium">Batas Pengiriman</span>
                                     <span class="font-bold text-primary">31 Agustus 2026</span>
                                 </div>
                             </div>
 
-                            <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer" class="w-full bg-primary hover:bg-primary-hover text-white py-3.5 rounded-xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2">
+                            <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer"
+                                class="w-full bg-primary hover:bg-primary-hover text-white py-3.5 rounded-xl font-bold text-sm transition-all text-center flex items-center justify-center gap-2">
                                 <span>Daftar Tim Sekarang</span>
                                 <i class="fa-solid fa-external-link text-xs"></i>
                             </a>
@@ -296,137 +353,169 @@
         <!-- Section: Subtema Lomba -->
         <section id="subtema" class="py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
                         <span>Fokus Inovasi</span>
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-primary">
                         6 Subtema Utama Kompetisi
                     </h2>
                     <p class="text-sm text-text-muted">
-                        Pilih salah satu cakupan fokus rekayasa dan pengembangan sistem energi terbarukan berikut untuk inovasi tim Anda.
+                        Pilih salah satu cakupan fokus rekayasa dan pengembangan sistem energi terbarukan berikut untuk
+                        inovasi tim Anda.
                     </p>
                 </div>
 
                 <!-- Subtheme Cards Grid (Clean layout, smooth scale-up hover effect) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    
+
                     <!-- Subtema 1: SURYA -->
-                    <div class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                    <div
+                        class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
                                 <i class="fa-solid fa-sun"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema 01</span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema
+                                    01</span>
                                 <h3 class="text-xl font-bold text-text-primary mt-1">Energi Surya (Solar Energy)</h3>
                             </div>
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Inovasi fotovoltaik (PV), sistem termal surya, konsentrator, pendinginan modul, hingga sistem pelacak matahari (solar tracker).
+                                Inovasi fotovoltaik (PV), sistem termal surya, konsentrator, pendinginan modul, hingga
+                                sistem pelacak matahari (solar tracker).
                             </p>
                         </div>
-                        <div class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
+                        <div
+                            class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
                             <span>Panel PV, Termal & Hybrid</span>
                             <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </div>
                     </div>
 
                     <!-- Subtema 2: ANGIN -->
-                    <div class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                    <div
+                        class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
                                 <i class="fa-solid fa-wind"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema 02</span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema
+                                    02</span>
                                 <h3 class="text-xl font-bold text-text-primary mt-1">Energi Angin (Wind Energy)</h3>
                             </div>
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Rancang bangun turbin angin sumbu horizontal/vertikal, mikro-angin daerah pemukiman, dan optimasi sudu turbin.
+                                Rancang bangun turbin angin sumbu horizontal/vertikal, mikro-angin daerah pemukiman, dan
+                                optimasi sudu turbin.
                             </p>
                         </div>
-                        <div class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
+                        <div
+                            class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
                             <span>Turbin & Mikro-Angin</span>
                             <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </div>
                     </div>
 
                     <!-- Subtema 3: BIOMASSA -->
-                    <div class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                    <div
+                        class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
                                 <i class="fa-solid fa-seedling"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema 03</span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema
+                                    03</span>
                                 <h3 class="text-xl font-bold text-text-primary mt-1">Biomassa & Bioenergi</h3>
                             </div>
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Konversi limbah organik menjadi biogas, biofuel, pelet biomassa, reaktor digester, serta teknologi pirolisis efisien.
+                                Konversi limbah organik menjadi biogas, biofuel, pelet biomassa, reaktor digester, serta
+                                teknologi pirolisis efisien.
                             </p>
                         </div>
-                        <div class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
+                        <div
+                            class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
                             <span>Biogas, Biofuel & Waste</span>
                             <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </div>
                     </div>
 
                     <!-- Subtema 4: GEOTHERMAL -->
-                    <div class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                    <div
+                        class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
                                 <i class="fa-solid fa-fire-flame-curved"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema 04</span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema
+                                    04</span>
                                 <h3 class="text-xl font-bold text-text-primary mt-1">Panas Bumi (Geothermal)</h3>
                             </div>
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Pemanfaatan langsung energi panas bumi skala kecil, sistem pertukaran kalor (heat exchanger), dan siklus termodinamika.
+                                Pemanfaatan langsung energi panas bumi skala kecil, sistem pertukaran kalor (heat
+                                exchanger), dan siklus termodinamika.
                             </p>
                         </div>
-                        <div class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
+                        <div
+                            class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
                             <span>Sistem Termal Panas Bumi</span>
                             <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </div>
                     </div>
 
                     <!-- Subtema 5: HIDRO -->
-                    <div class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                    <div
+                        class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
                                 <i class="fa-solid fa-water"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema 05</span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema
+                                    05</span>
                                 <h3 class="text-xl font-bold text-text-primary mt-1">Hidro & Energi Laut</h3>
                             </div>
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Pembangkit pikohidro/mikrohidro, energi gelombang laut, arus pasang surut, serta inovasi kincir air pedesaan.
+                                Pembangkit pikohidro/mikrohidro, energi gelombang laut, arus pasang surut, serta inovasi
+                                kincir air pedesaan.
                             </p>
                         </div>
-                        <div class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
+                        <div
+                            class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
                             <span>Mikrohidro & Gelombang Laut</span>
                             <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </div>
                     </div>
 
                     <!-- Subtema 6: HYBRID & SMART GRID -->
-                    <div class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                    <div
+                        class="subtheme-card bg-surface p-6 sm:p-7 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl font-bold border border-border-subtle">
                                 <i class="fa-solid fa-bolt-lightning"></i>
                             </div>
                             <div>
-                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema 06</span>
+                                <span class="text-[11px] font-bold text-primary uppercase tracking-widest">Subtema
+                                    06</span>
                                 <h3 class="text-xl font-bold text-text-primary mt-1">Hybrid & Smart Grid</h3>
                             </div>
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Penggabungan multiproduksi EBT, manajemen penyimpanan energi (BMS), pemantauan IoT, dan sistem Smart Microgrid.
+                                Penggabungan multiproduksi EBT, manajemen penyimpanan energi (BMS), pemantauan IoT, dan
+                                sistem Smart Microgrid.
                             </p>
                         </div>
-                        <div class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
+                        <div
+                            class="pt-6 mt-4 border-t border-border-subtle flex items-center justify-between text-xs font-semibold text-primary">
                             <span>IoT, BMS & Smart Microgrid</span>
                             <i class="fa-solid fa-chevron-right text-[10px]"></i>
                         </div>
@@ -440,90 +529,112 @@
         <!-- Section: Alur & Timeline Lomba -->
         <section id="timeline" class="py-16 bg-surface border-y border-border-subtle">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
                         <span>Jadwal Pelaksanaan</span>
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-primary">
                         Tahapan Pelaksanaan KN-RBSET 2026
                     </h2>
                     <p class="text-sm text-text-muted">
-                        Pastikan tim Anda mencatat seluruh tanggal penting berikut untuk tidak melewatkan setiap tahapan seleksi.
+                        Pastikan tim Anda mencatat seluruh tanggal penting berikut untuk tidak melewatkan setiap tahapan
+                        seleksi.
                     </p>
                 </div>
 
                 <!-- Timeline Cards Grid (4 Stages) -->
                 <div class="relative">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-                        
+
                         <!-- Tahap 1 -->
-                        <div class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                        <div
+                            class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                             <div class="space-y-3">
-                                <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
                                     1
                                 </div>
-                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">1 – 31 Agustus 2026</span>
+                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">1 – 31 Agustus
+                                    2026</span>
                                 <h3 class="text-lg font-bold text-text-primary">Pendaftaran Tim</h3>
                                 <p class="text-xs text-text-muted leading-relaxed">
-                                    Registrasi tim secara online, pendaftaran identitas tim, dan pengunggahan berkas administrasi awal.
+                                    Registrasi tim secara online, pendaftaran identitas tim, dan pengunggahan berkas
+                                    administrasi awal.
                                 </p>
                             </div>
-                            <div class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-bold text-primary flex items-center gap-1">
+                            <div
+                                class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-bold text-primary flex items-center gap-1">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <span>Tahap 1: Registrasi Online</span>
                             </div>
                         </div>
 
                         <!-- Tahap 2 -->
-                        <div class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                        <div
+                            class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                             <div class="space-y-3">
-                                <div class="w-10 h-10 rounded-full bg-accent-soft border border-primary text-primary flex items-center justify-center font-bold text-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-accent-soft border border-primary text-primary flex items-center justify-center font-bold text-sm">
                                     2
                                 </div>
-                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">1 – 15 September 2026</span>
+                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">1 – 15
+                                    September 2026</span>
                                 <h3 class="text-lg font-bold text-text-primary">Seleksi Administrasi</h3>
                                 <p class="text-xs text-text-muted leading-relaxed">
-                                    Verifikasi kelengkapan dokumen administrasi dan pengumuman kelayakan tim ke tahap selanjutnya.
+                                    Verifikasi kelengkapan dokumen administrasi dan pengumuman kelayakan tim ke tahap
+                                    selanjutnya.
                                 </p>
                             </div>
-                            <div class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-medium text-text-muted flex items-center gap-1">
+                            <div
+                                class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-medium text-text-muted flex items-center gap-1">
                                 <i class="fa-solid fa-clock"></i>
                                 <span>Tahap 2: Verifikasi Berkas</span>
                             </div>
                         </div>
 
                         <!-- Tahap 3 -->
-                        <div class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                        <div
+                            class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                             <div class="space-y-3">
-                                <div class="w-10 h-10 rounded-full bg-accent-soft border border-primary text-primary flex items-center justify-center font-bold text-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-accent-soft border border-primary text-primary flex items-center justify-center font-bold text-sm">
                                     3
                                 </div>
-                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">16 – 29 September 2026</span>
+                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">16 – 29
+                                    September 2026</span>
                                 <h3 class="text-lg font-bold text-text-primary">Pengembangan Proposal</h3>
                                 <p class="text-xs text-text-muted leading-relaxed">
-                                    Penyusunan dan pengumpulan draft proposal karya ilmiah/rancang bangun sistem EBT sesuai format resmi.
+                                    Penyusunan dan pengumpulan draft proposal karya ilmiah/rancang bangun sistem EBT
+                                    sesuai format resmi.
                                 </p>
                             </div>
-                            <div class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-medium text-text-muted flex items-center gap-1">
+                            <div
+                                class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-medium text-text-muted flex items-center gap-1">
                                 <i class="fa-solid fa-file-lines"></i>
                                 <span>Tahap 3: Proposal Karya</span>
                             </div>
                         </div>
 
                         <!-- Tahap 4 -->
-                        <div class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
+                        <div
+                            class="bg-bg-main p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between">
                             <div class="space-y-3">
-                                <div class="w-10 h-10 rounded-full bg-accent-soft border border-primary text-primary flex items-center justify-center font-bold text-sm">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-accent-soft border border-primary text-primary flex items-center justify-center font-bold text-sm">
                                     4
                                 </div>
-                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">30 September 2026</span>
+                                <span class="text-xs font-semibold text-primary uppercase tracking-wide">30 September
+                                    2026</span>
                                 <h3 class="text-lg font-bold text-text-primary">Grand Final & Presentasi</h3>
                                 <p class="text-xs text-text-muted leading-relaxed">
-                                    Pengujian karya, demo model/prototipe, serta sesi presentasi langsung di hadapan dewan juri pakar EBT.
+                                    Pengujian karya, demo model/prototipe, serta sesi presentasi langsung di hadapan
+                                    dewan juri pakar EBT.
                                 </p>
                             </div>
-                            <div class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-medium text-text-muted flex items-center gap-1">
+                            <div
+                                class="pt-4 mt-4 border-t border-border-subtle text-[11px] font-medium text-text-muted flex items-center gap-1">
                                 <i class="fa-solid fa-trophy"></i>
                                 <span>Tahap 4: Babak Final</span>
                             </div>
@@ -538,37 +649,44 @@
         <!-- Section: Pusat Unduhan (Download Center) -->
         <section id="unduhan" class="py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
+                    <div
+                        class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
                         <span>Pusat Unduhan</span>
                     </div>
                     <h2 class="text-2xl sm:text-3xl font-extrabold text-primary">
                         Dokumen Resmi & Template Kompetisi
                     </h2>
                     <p class="text-sm text-text-muted">
-                        Unduh berkas panduan dan format dokumen standar untuk keperluan penyusunan berkas pendaftaran tim Anda.
+                        Unduh berkas panduan dan format dokumen standar untuk keperluan penyusunan berkas pendaftaran
+                        tim Anda.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    
+
                     <!-- File 1: Buku Panduan -->
-                    <div class="bg-surface p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between hover:border-primary transition-colors">
+                    <div
+                        class="bg-surface p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between hover:border-primary transition-colors">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl">
                                 <i class="fa-solid fa-book"></i>
                             </div>
                             <div>
-                                <span class="text-[10px] font-bold text-primary uppercase tracking-wider">PDF Document</span>
+                                <span class="text-[10px] font-bold text-primary uppercase tracking-wider">PDF
+                                    Document</span>
                                 <h3 class="text-base font-bold text-text-primary mt-0.5">Buku Panduan KN-RBSET 2026</h3>
                                 <p class="text-xs text-text-muted mt-2 leading-relaxed">
-                                    Panduan teknis pendaftaran, aturan perlombaan, kriteria penilaian juri, dan sistematika penulisan.
+                                    Panduan teknis pendaftaran, aturan perlombaan, kriteria penilaian juri, dan
+                                    sistematika penulisan.
                                 </p>
                             </div>
                         </div>
                         <div class="pt-6 mt-4 border-t border-border-subtle">
-                            <a href="#unduhan" class="w-full bg-accent-soft hover:bg-primary hover:text-white text-primary py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
+                            <a href="#unduhan"
+                                class="w-full bg-accent-soft hover:bg-primary hover:text-white text-primary py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-download"></i>
                                 <span>Unduh Guidebook (PDF)</span>
                             </a>
@@ -576,21 +694,26 @@
                     </div>
 
                     <!-- File 2: Template Proposal -->
-                    <div class="bg-surface p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between hover:border-primary transition-colors">
+                    <div
+                        class="bg-surface p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between hover:border-primary transition-colors">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl">
                                 <i class="fa-solid fa-file-word"></i>
                             </div>
                             <div>
-                                <span class="text-[10px] font-bold text-primary uppercase tracking-wider">DOCX Document</span>
+                                <span class="text-[10px] font-bold text-primary uppercase tracking-wider">DOCX
+                                    Document</span>
                                 <h3 class="text-base font-bold text-text-primary mt-0.5">Template Proposal Artikel</h3>
                                 <p class="text-xs text-text-muted mt-2 leading-relaxed">
-                                    Format baku struktur penyusunan proposal karya rancang bangun, tata letak, dan standar margin baku.
+                                    Format baku struktur penyusunan proposal karya rancang bangun, tata letak, dan
+                                    standar margin baku.
                                 </p>
                             </div>
                         </div>
                         <div class="pt-6 mt-4 border-t border-border-subtle">
-                            <a href="#unduhan" class="w-full bg-accent-soft hover:bg-primary hover:text-white text-primary py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
+                            <a href="#unduhan"
+                                class="w-full bg-accent-soft hover:bg-primary hover:text-white text-primary py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-download"></i>
                                 <span>Unduh Template (DOCX)</span>
                             </a>
@@ -598,21 +721,26 @@
                     </div>
 
                     <!-- File 3: Lembar Pengesahan -->
-                    <div class="bg-surface p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between hover:border-primary transition-colors">
+                    <div
+                        class="bg-surface p-6 rounded-2xl border border-border-subtle shadow-soft-elevation flex flex-col justify-between hover:border-primary transition-colors">
                         <div class="space-y-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-accent-soft text-primary flex items-center justify-center text-xl">
                                 <i class="fa-solid fa-file-signature"></i>
                             </div>
                             <div>
-                                <span class="text-[10px] font-bold text-primary uppercase tracking-wider">DOCX Document</span>
+                                <span class="text-[10px] font-bold text-primary uppercase tracking-wider">DOCX
+                                    Document</span>
                                 <h3 class="text-base font-bold text-text-primary mt-0.5">Template Lembar Pengesahan</h3>
                                 <p class="text-xs text-text-muted mt-2 leading-relaxed">
-                                    Format lembar persetujuan dan tanda tangan dosen pembimbing serta pimpinan fakultas/perguruan tinggi.
+                                    Format lembar persetujuan dan tanda tangan dosen pembimbing serta pimpinan
+                                    fakultas/perguruan tinggi.
                                 </p>
                             </div>
                         </div>
                         <div class="pt-6 mt-4 border-t border-border-subtle">
-                            <a href="#unduhan" class="w-full bg-accent-soft hover:bg-primary hover:text-white text-primary py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
+                            <a href="#unduhan"
+                                class="w-full bg-accent-soft hover:bg-primary hover:text-white text-primary py-2.5 rounded-xl font-bold text-xs transition-all flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-download"></i>
                                 <span>Unduh Format (DOCX)</span>
                             </a>
@@ -627,9 +755,11 @@
         <!-- Section: Publikasi Artikel -->
         <section class="py-16 bg-surface border-y border-border-subtle">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-bg-main rounded-2xl p-8 sm:p-12 border border-border-subtle flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div
+                    class="bg-bg-main rounded-2xl p-8 sm:p-12 border border-border-subtle flex flex-col lg:flex-row items-center justify-between gap-8">
                     <div class="space-y-4 max-w-2xl text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
                             <i class="fa-solid fa-newspaper"></i>
                             <span>Luaran Karya Peserta</span>
                         </div>
@@ -637,11 +767,14 @@
                             Peluang Publikasi Artikel Ilmiah
                         </h2>
                         <p class="text-sm text-text-muted leading-relaxed">
-                            Seluruh draft proposal karya terbaik yang memenuhi standar kualitas akademis berkesempatan untuk dipublikasikan pada Jurnal Nasional Terakreditasi dan Prosiding Seminar Nasional mitra resmi KN-RBSET 2026.
+                            Seluruh draft proposal karya terbaik yang memenuhi standar kualitas akademis berkesempatan
+                            untuk dipublikasikan pada Jurnal Nasional Terakreditasi dan Prosiding Seminar Nasional mitra
+                            resmi KN-RBSET 2026.
                         </p>
                     </div>
                     <div class="shrink-0">
-                        <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer" class="bg-primary hover:bg-primary-hover text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-soft-elevation transition-all flex items-center gap-2">
+                        <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer"
+                            class="bg-primary hover:bg-primary-hover text-white px-7 py-3.5 rounded-xl font-bold text-sm shadow-soft-elevation transition-all flex items-center gap-2">
                             <span>Daftarkan Karya Tim</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
@@ -653,13 +786,14 @@
         <!-- Section: FAQ & Kontak -->
         <section id="faq" class="py-16 lg:py-24">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    
+
                     <!-- FAQ Left Column -->
                     <div class="lg:col-span-7 space-y-6">
                         <div class="space-y-3">
-                            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
+                            <div
+                                class="inline-flex items-center gap-2 px-3.5 py-1 rounded-md bg-accent-soft text-primary font-bold text-xs uppercase tracking-wider">
                                 <span>Pusat Bantuan</span>
                             </div>
                             <h2 class="text-2xl sm:text-3xl font-extrabold text-primary">
@@ -669,48 +803,66 @@
 
                         <!-- Accordions List -->
                         <div class="space-y-4 pt-2">
-                            
+
                             <!-- FAQ Item 1 -->
                             <div class="bg-surface rounded-xl border border-border-subtle overflow-hidden">
-                                <button onclick="toggleFaq(0)" class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
+                                <button onclick="toggleFaq(0)"
+                                    class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
                                     <span>Siapa saja yang memenuhi syarat mendaftar KN-RBSET?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300" id="faq-icon-0"></i>
+                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300"
+                                        id="faq-icon-0"></i>
                                 </button>
-                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden" id="faq-content-0">
-                                    Kompetisi ini terbuka untuk seluruh mahasiswa aktif jenjang Sarjana (S1) dan Diploma 4 (D4) dari Perguruan Tinggi Negeri maupun Swasta di seluruh Indonesia. Setiap tim terdiri dari 3 hingga 5 mahasiswa dari universitas yang sama.
+                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden"
+                                    id="faq-content-0">
+                                    Kompetisi ini terbuka untuk seluruh mahasiswa aktif jenjang Sarjana (S1) dan Diploma
+                                    4 (D4) dari Perguruan Tinggi Negeri maupun Swasta di seluruh Indonesia. Setiap tim
+                                    terdiri dari 3 hingga 5 mahasiswa dari universitas yang sama.
                                 </div>
                             </div>
 
                             <!-- FAQ Item 2 -->
                             <div class="bg-surface rounded-xl border border-border-subtle overflow-hidden">
-                                <button onclick="toggleFaq(1)" class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
+                                <button onclick="toggleFaq(1)"
+                                    class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
                                     <span>Apakah terdapat biaya pendaftaran kompetisi?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300" id="faq-icon-1"></i>
+                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300"
+                                        id="faq-icon-1"></i>
                                 </button>
-                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden" id="faq-content-1">
-                                    Proses pendaftaran awal dan seleksi administrasi awal tidak dipungut biaya (Gratis). Informasi lanjutan mengenai tahap berikutnya dapat dibaca pada Buku Panduan Resmi.
+                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden"
+                                    id="faq-content-1">
+                                    Proses pendaftaran awal dan seleksi administrasi awal tidak dipungut biaya (Gratis).
+                                    Informasi lanjutan mengenai tahap berikutnya dapat dibaca pada Buku Panduan Resmi.
                                 </div>
                             </div>
 
                             <!-- FAQ Item 3 -->
                             <div class="bg-surface rounded-xl border border-border-subtle overflow-hidden">
-                                <button onclick="toggleFaq(2)" class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
+                                <button onclick="toggleFaq(2)"
+                                    class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
                                     <span>Bolehkah anggota tim berasal dari lintas program studi/jurusan?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300" id="faq-icon-2"></i>
+                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300"
+                                        id="faq-icon-2"></i>
                                 </button>
-                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden" id="faq-content-2">
-                                    Sangat diperbolehkan! Kolaborasi lintas disiplin ilmu (misalnya Teknik Elektro, Teknik Mesin, Fisika, dan Ekonomi) sangat dianjurkan untuk memperkaya analisis sistem dan kelayakan rancangan.
+                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden"
+                                    id="faq-content-2">
+                                    Sangat diperbolehkan! Kolaborasi lintas disiplin ilmu (misalnya Teknik Elektro,
+                                    Teknik Mesin, Fisika, dan Ekonomi) sangat dianjurkan untuk memperkaya analisis
+                                    sistem dan kelayakan rancangan.
                                 </div>
                             </div>
 
                             <!-- FAQ Item 4 -->
                             <div class="bg-surface rounded-xl border border-border-subtle overflow-hidden">
-                                <button onclick="toggleFaq(3)" class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
+                                <button onclick="toggleFaq(3)"
+                                    class="w-full p-5 text-left font-bold text-sm text-text-primary flex items-center justify-between gap-4 focus:outline-none">
                                     <span>Apakah produk rancang bangun harus dalam bentuk alat fisik prototipe?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300" id="faq-icon-3"></i>
+                                    <i class="fa-solid fa-chevron-down text-xs text-primary transition-transform duration-300"
+                                        id="faq-icon-3"></i>
                                 </button>
-                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden" id="faq-content-3">
-                                    Karya dapat berupa model rancangan rinci, simulasi terverifikasi, hingga prototipe fungsional (skala laboratorium/lapangan) sesuai kriteria subtema yang dipilih.
+                                <div class="accordion-content px-5 pb-5 text-xs text-text-muted leading-relaxed hidden"
+                                    id="faq-content-3">
+                                    Karya dapat berupa model rancangan rinci, simulasi terverifikasi, hingga prototipe
+                                    fungsional (skala laboratorium/lapangan) sesuai kriteria subtema yang dipilih.
                                 </div>
                             </div>
 
@@ -719,40 +871,53 @@
 
                     <!-- Contact Panitia Right Column -->
                     <div class="lg:col-span-5 space-y-6">
-                        <div class="bg-surface p-6 sm:p-8 rounded-2xl border border-border-subtle shadow-soft-elevation space-y-6">
-                            <h3 class="text-lg font-bold text-primary flex items-center gap-2 border-b border-border-subtle pb-4">
+                        <div
+                            class="bg-surface p-6 sm:p-8 rounded-2xl border border-border-subtle shadow-soft-elevation space-y-6">
+                            <h3
+                                class="text-lg font-bold text-primary flex items-center gap-2 border-b border-border-subtle pb-4">
                                 <i class="fa-solid fa-headset"></i>
                                 <span>Kontak Layanan Panitia</span>
                             </h3>
 
                             <p class="text-xs text-text-muted leading-relaxed">
-                                Memiliki pertanyaan spesifik atau kendala teknis saat mengunggah dokumen? Hubungi sekretariat panitia KN-RBSET melalui kanal resmi berikut:
+                                Memiliki pertanyaan spesifik atau kendala teknis saat mengunggah dokumen? Hubungi
+                                sekretariat panitia KN-RBSET melalui kanal resmi berikut:
                             </p>
 
                             <div class="space-y-3 pt-2">
-                                <a href="https://wa.me/628123456789" target="_blank" class="p-4 rounded-xl bg-bg-main border border-border-subtle flex items-center gap-4 hover:border-primary transition-colors group">
-                                    <div class="w-10 h-10 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0">
+                                <a href="https://wa.me/628123456789" target="_blank"
+                                    class="p-4 rounded-xl bg-bg-main border border-border-subtle flex items-center gap-4 hover:border-primary transition-colors group">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0">
                                         <i class="fa-brands fa-whatsapp text-lg"></i>
                                     </div>
                                     <div>
-                                        <span class="text-[10px] font-bold text-text-muted uppercase">WhatsApp Helpdesk</span>
-                                        <h4 class="text-sm font-bold text-text-primary group-hover:text-primary transition-colors">+62 812-3456-7890</h4>
+                                        <span class="text-[10px] font-bold text-text-muted uppercase">WhatsApp
+                                            Helpdesk</span>
+                                        <h4
+                                            class="text-sm font-bold text-text-primary group-hover:text-primary transition-colors">
+                                            +62 812-3456-7890</h4>
                                     </div>
                                 </a>
 
-                                <a href="mailto:info@kn-rbset.id" class="p-4 rounded-xl bg-bg-main border border-border-subtle flex items-center gap-4 hover:border-primary transition-colors group">
-                                    <div class="w-10 h-10 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0">
+                                <a href="mailto:info@kn-rbset.id"
+                                    class="p-4 rounded-xl bg-bg-main border border-border-subtle flex items-center gap-4 hover:border-primary transition-colors group">
+                                    <div
+                                        class="w-10 h-10 rounded-lg bg-accent-soft text-primary flex items-center justify-center shrink-0">
                                         <i class="fa-regular fa-envelope text-lg"></i>
                                     </div>
                                     <div>
                                         <span class="text-[10px] font-bold text-text-muted uppercase">Email Resmi</span>
-                                        <h4 class="text-sm font-bold text-text-primary group-hover:text-primary transition-colors">info@kn-rbset.id</h4>
+                                        <h4
+                                            class="text-sm font-bold text-text-primary group-hover:text-primary transition-colors">
+                                            info@kn-rbset.id</h4>
                                     </div>
                                 </a>
                             </div>
 
                             <div class="pt-2 text-center">
-                                <span class="text-[11px] text-text-muted">Jam Operasional Layanan: Senin – Jumat (08.00 – 17.00 WIB)</span>
+                                <span class="text-[11px] text-text-muted">Jam Operasional Layanan: Senin – Jumat (08.00
+                                    – 17.00 WIB)</span>
                             </div>
                         </div>
                     </div>
@@ -768,17 +933,17 @@
     <footer class="bg-surface border-t border-border-subtle py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-border-subtle">
-                
+
                 <!-- Footer Brand Column -->
                 <div class="md:col-span-5 space-y-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white font-extrabold text-base">
-                            <i class="fa-solid fa-leaf"></i>
-                        </div>
+                        <img src="src/Assets/lktiprodi.png" alt="Logo KN-RBSET"
+                            class="w-10 h-10 object-contain rounded-xl">
                         <span class="font-extrabold text-lg text-primary tracking-tight">KN-RBSET 2026</span>
                     </div>
                     <p class="text-xs text-text-muted leading-relaxed max-w-sm">
-                        Kompetisi Rancang Bangun Sistem Energi Terbarukan tingkat nasional. Mengakselerasi gagasan inovatif mahasiswa Indonesia menuju masa depan energi bersih dan berkelanjutan.
+                        Kompetisi Rancang Bangun Sistem Energi Terbarukan tingkat nasional. Mengakselerasi gagasan
+                        inovatif mahasiswa Indonesia menuju masa depan energi bersih dan berkelanjutan.
                     </p>
                 </div>
 
@@ -797,8 +962,10 @@
                 <!-- Tautan Eksternal -->
                 <div class="md:col-span-4 space-y-3">
                     <h4 class="text-xs font-bold text-primary uppercase tracking-wider">Pendaftaran</h4>
-                    <p class="text-xs text-text-muted">Siapkan tim terbaik Anda dan kirimkan pendaftaran sebelum 31 Agustus 2026.</p>
-                    <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-accent-soft text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors">
+                    <p class="text-xs text-text-muted">Siapkan tim terbaik Anda dan kirimkan pendaftaran sebelum 31
+                        Agustus 2026.</p>
+                    <a href="https://s.id/pendaftaran-kn-rbset2026" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 bg-accent-soft text-primary hover:bg-primary hover:text-white px-4 py-2 rounded-xl text-xs font-bold transition-colors">
                         <span>Form Pendaftaran Eksternal</span>
                         <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
                     </a>
@@ -848,7 +1015,7 @@
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobile-menu');
             const menuIcon = document.getElementById('menu-icon');
-            
+
             if (mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.remove('hidden');
                 menuIcon.classList.remove('fa-bars');
@@ -864,7 +1031,7 @@
         function toggleFaq(index) {
             const content = document.getElementById(`faq-content-${index}`);
             const icon = document.getElementById(`faq-icon-${index}`);
-            
+
             const isHidden = content.classList.contains('hidden');
 
             // Close all items
@@ -901,4 +1068,5 @@
         });
     </script>
 </body>
+
 </html>
