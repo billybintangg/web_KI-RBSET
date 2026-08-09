@@ -78,7 +78,7 @@
         }
     </style>
 </head>
-<body class="font-sans bg-slate-50 text-slate-800 antialiased selection:bg-brand-cyan selection:text-white">
+<body class="font-sans text-lg bg-slate-50 text-slate-800 antialiased selection:bg-brand-cyan selection:text-white">
 
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-brand-cyan/20" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -473,112 +473,119 @@
         </div>
     </section>
 
-    <!-- SECTION JADWAL PELAKSANAAN / TIMELINE -->
-    <section id="jadwal" class="py-20 bg-white border-b border-slate-100">
+ <!-- Timeline Section -->
+    <section id="jadwal" class="py-20 bg-white">     
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-brand-light border border-brand-cyan/30 text-brand-blue text-xs font-extrabold uppercase tracking-widest">
-                    JADWAL PELAKSANAAN
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
-                    Tahapan Pelaksanaan KI–RBSET 2026
-                </h2>
-                <p class="text-slate-600 text-sm sm:text-base">
-                    Pastikan tim Anda mencatat seluruh tanggal penting berikut untuk tidak melewatkan setiap tahapan seleksi.
-                </p>
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-extrabold tracking-widest text-brand-cyan uppercase">Timeline Kegiatan</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">Rangkaian Jadwal KI-RBSET 2026</p>
+                <p class="text-slate-600 text-sm sm:text-base">Catat tanggal pentingnya dan pastikan kamu tidak terlewat!</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Tahap 1 -->
-                <div class="p-6 rounded-2xl bg-brand-lighter/80 border border-brand-cyan/20 shadow-sm hover:shadow-brand transition-all duration-300 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="w-10 h-10 rounded-full bg-brand-gradient text-white flex items-center justify-center font-bold text-sm shadow-brand">
-                            1
-                        </div>
-                        <div class="text-xs font-bold text-brand-blue uppercase tracking-wider">
-                            1 – 31 AGUSTUS 2026
-                        </div>
-                        <h3 class="text-xl font-extrabold text-slate-900">
-                            Pendaftaran Tim
-                        </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Registrasi tim secara online, pendaftaran identitas tim, dan pengunggahan berkas administrasi awal.
-                        </p>
+            <div class="timeline-container py-4">
+                <!-- Fase 2: Open Registration -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-primary to-secondary shadow-md shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-user-plus text-white text-sm"></i>
                     </div>
-                    <div class="pt-4 border-t border-brand-cyan/20 flex items-center space-x-2 text-xs font-bold text-brand-blue">
-                        <i class="fa-solid fa-circle-check text-brand-cyan"></i>
-                        <span>Tahap 1: Registrasi Online</span>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Open Registration</h3>
+                        <p class="text-brand-cyan font-semibold"><i class="far fa-calendar-alt mr-2"></i>10–20 Agustus 2026 (extend 2 hari)</p>
                     </div>
                 </div>
 
-                <!-- Tahap 2 -->
-                <div class="p-6 rounded-2xl bg-brand-lighter/80 border border-brand-cyan/20 shadow-sm hover:shadow-brand transition-all duration-300 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="w-10 h-10 rounded-full border-2 border-brand-cyan bg-white text-brand-blue flex items-center justify-center font-bold text-sm">
-                            2
-                        </div>
-                        <div class="text-xs font-bold text-brand-blue uppercase tracking-wider">
-                            1 – 15 SEPTEMBER 2026
-                        </div>
-                        <h3 class="text-xl font-extrabold text-slate-900">
-                            Seleksi Administrasi
-                        </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Verifikasi kelengkapan dokumen administrasi dan pengumuman kelayakan tim ke tahap selanjutnya.
-                        </p>
+                <!-- Fase 3: Preliminary Submission Deadline -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-file-alt text-brand-cyan text-sm"></i>
                     </div>
-                    <div class="pt-4 border-t border-brand-cyan/20 flex items-center space-x-2 text-xs font-medium text-slate-600">
-                        <i class="fa-regular fa-clock text-brand-cyan"></i>
-                        <span>Tahap 2: Verifikasi Berkas</span>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Preliminary Submission Deadline</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>22 Agustus–1 September 2026 (extend 2 hari)</p>
                     </div>
                 </div>
 
-                <!-- Tahap 3 -->
-                <div class="p-6 rounded-2xl bg-brand-lighter/80 border border-brand-cyan/20 shadow-sm hover:shadow-brand transition-all duration-300 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="w-10 h-10 rounded-full border-2 border-brand-cyan bg-white text-brand-blue flex items-center justify-center font-bold text-sm">
-                            3
-                        </div>
-                        <div class="text-xs font-bold text-brand-blue uppercase tracking-wider">
-                            16 – 29 SEPTEMBER 2026
-                        </div>
-                        <h3 class="text-xl font-extrabold text-slate-900">
-                            Pengembangan Proposal
-                        </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Penyusunan dan pengumpulan draft proposal karya ilmiah/rancang bangun sistem EBT sesuai format resmi.
-                        </p>
+                <!-- Fase 4: Semifinalist Announcement -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-bullhorn text-brand-cyan text-sm"></i>
                     </div>
-                    <div class="pt-4 border-t border-brand-cyan/20 flex items-center space-x-2 text-xs font-medium text-slate-600">
-                        <i class="fa-regular fa-file-lines text-brand-cyan"></i>
-                        <span>Tahap 3: Proposal Karya</span>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                         <h3 class="font-bold text-lg text-dark mb-2">Semifinalist Announcement</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>4 September 2026</p>
                     </div>
                 </div>
 
-                <!-- Tahap 4 -->
-                <div class="p-6 rounded-2xl bg-brand-lighter/80 border border-brand-cyan/20 shadow-sm hover:shadow-brand transition-all duration-300 flex flex-col justify-between space-y-6">
-                    <div class="space-y-4">
-                        <div class="w-10 h-10 rounded-full border-2 border-brand-cyan bg-white text-brand-blue flex items-center justify-center font-bold text-sm">
-                            4
-                        </div>
-                        <div class="text-xs font-bold text-brand-blue uppercase tracking-wider">
-                            30 SEPTEMBER 2026
-                        </div>
-                        <h3 class="text-xl font-extrabold text-slate-900">
-                            Grand Final & Presentasi
-                        </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                            Pengujian karya, demo model/prototipe, serta sesi presentasi langsung di hadapan dewan juri pakar EBT.
-                        </p>
+                <!-- Fase 5: Re-registration -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-id-card text-brand-cyan text-sm"></i>
                     </div>
-                    <div class="pt-4 border-t border-brand-cyan/20 flex items-center space-x-2 text-xs font-medium text-slate-600">
-                        <i class="fa-solid fa-trophy text-brand-cyan"></i>
-                        <span>Tahap 4: Babak Final</span>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Re-registration</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>5–7 September 2026</p>
                     </div>
                 </div>
+                
+                 <!-- Fase 6: Full Paper & Project Development -->
+                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-laptop-code text-brand-cyan text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Full Paper & Project Development</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>8–20 September 2026</p>
+                    </div>
+                </div>
+
+                <!-- Fase 7: Semi Final Submission Deadline -->
+                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-file-upload text-primary text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Semi Final Submission Deadline</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>20–21 September 2026</p>
+                    </div>
+                </div>
+
+                <!-- Fase 8: Finalist Announcement -->
+                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-trophy text-brand-cyan text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Finalist Announcement</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>26 September 2026</p>
+                    </div>
+                </div>
+
+                <!-- Fase 9: Finalist Confirmation -->
+                 <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-8">
+                    <div class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 shadow-sm shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[15px] md:left-1/2 -ml-5 md:ml-0">
+                        <i class="fas fa-check-circle text-primary text-sm"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-slate-50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-soft hover:-translate-y-1 transition-all duration-300">
+                        <h3 class="font-bold text-lg text-dark mb-2">Finalist Confirmation</h3>
+                        <p class="text-secondary font-semibold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>26–28 September 2026</p>
+                    </div>
+                </div>
+
+                <!-- Fase 10: Final Day -->
+                <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                    <div class="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 border-4 border-white absolute left-[11px] md:left-1/2 -ml-6 md:ml-0">
+                        <i class="fas fa-crown text-white text-lg"></i>
+                    </div>
+                    <div class="w-[calc(100%-3rem)] md:w-[calc(50%-2.5rem)] ml-auto md:ml-0 bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-2xl shadow-soft border border-yellow-200 hover:-translate-y-1 transition-all duration-300 hover:shadow-lg">
+                        <h3 class="font-bold text-xl text-dark mb-2 text-yellow-800">Final Day</h3>
+                        <p class="text-yellow-700 font-bold text-brand-cyan"><i class="far fa-calendar-alt mr-2"></i>5 Oktober 2026</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
 
     <!-- SECTION UNDUHAN TEMPLATE & GUIDEBOOK -->
     <section id="unduhan" class="py-20 bg-slate-50 border-b border-slate-100">
