@@ -9,6 +9,20 @@
       type="image/x-icon"
       href="src/Assets/lktiprodi-removebg-preview.png"
     />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-BTC9MTC2K0"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-BTC9MTC2K0");
+    </script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -155,6 +169,11 @@
               href="#faq"
               class="text-sm font-semibold text-slate-700 hover:text-brand-cyan transition-colors"
               >FAQ</a
+            >
+            <a
+              href="#report"
+              class="text-sm font-semibold text-slate-700 hover:text-brand-cyan transition-colors"
+              >Report</a
             >
           </nav>
 
@@ -1609,6 +1628,33 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <section id="report" class="py-20 bg-white border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+          <div
+            class="inline-block px-4 py-1.5 rounded-full bg-brand-light border border-brand-cyan/30 text-brand-blue text-xs font-extrabold uppercase tracking-widest"
+          >
+            REPORT & STATISTICS
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+            KI-RBSET 2026 Report & Statistics
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base">
+            The following report provides a comprehensive overview of the
+            competition's performance, including participant statistics,
+            evaluation results, and other relevant data.
+          </p>
+        </div>
+
+        <!-- Embed Google Data Studio Report -->  
+      <iframe class="w-full h-[600px] shadow-sm hover:shadow-brand transition-all duration-300" 
+              src="https://datastudio.google.com/embed/reporting/ed89d230-c7e5-4e64-aa37-0c08d6956b64/page/Edy6F" 
+              frameborder="0" 
+              style="border:0" 
+              allowfullscreen 
+              sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
     </section>
 
     <footer class="py-12 bg-slate-900 text-white">
