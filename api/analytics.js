@@ -1,9 +1,9 @@
 const { BetaAnalyticsDataClient } = require("@google-analytics/data");
 
-const privateKey = process.env.GA_PRIVATE_KEY
-  ?.replace(/^["']|["']$/g, "")
-  .replace(/\\n/g, "\n")
-  .trim();
+const privateKey = Buffer.from(
+  process.env.GA_PRIVATE_KEY_BASE64 || "",
+  "base64"
+).toString("utf8");
 
 const analyticsDataClient = new BetaAnalyticsDataClient({
   credentials: {
