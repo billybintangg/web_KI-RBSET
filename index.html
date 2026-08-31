@@ -356,7 +356,7 @@
                   class="flex items-center justify-center space-x-2 text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-4"
                 >
                   <i class="fa-regular fa-clock text-brand-cyan text-base"></i>
-                  <span>Team Registration Deadline: August 31, 2026</span>
+                  <span>Team Registration Deadline: September 8, 2026</span>
                 </div>
 
                 <!-- Timer Display Cards -->
@@ -1634,32 +1634,221 @@
       </div>
     </section>
 
-    <section id="report" class="py-20 bg-white border-b border-slate-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
-          <div
-            class="inline-block px-4 py-1.5 rounded-full bg-brand-light border border-brand-cyan/30 text-brand-blue text-xs font-extrabold uppercase tracking-widest"
-          >
-            REPORT & STATISTICS
+<section
+  id="report"
+  class="py-20 bg-gradient-to-b from-white to-brand-lighter/40 border-b border-slate-100"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+      <div
+        class="inline-block px-4 py-1.5 rounded-full bg-brand-light border border-brand-cyan/30 text-brand-blue text-xs font-extrabold uppercase tracking-widest"
+      >
+        REPORT & STATISTICS
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+        KI-RBSET 2026 Report & Statistics
+      </h2>
+
+      <p class="text-slate-600 text-sm sm:text-base">
+        Explore website visitor statistics, geographic distribution, and other
+        analytics related to KI-RBSET 2026.
+      </p>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+      <!-- Total Users -->
+      <div
+        class="bg-white border border-brand-cyan/20 rounded-3xl p-6 shadow-sm hover:shadow-brand transition-all duration-300"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold text-slate-500 mb-2">
+              Total Website Users
+            </p>
+
+            <h3
+              id="stat-total-users"
+              class="text-4xl font-extrabold text-slate-900"
+            >
+              --
+            </h3>
+
+            <p class="text-xs text-slate-500 mt-2">
+              Visitors recorded by Google Analytics
+            </p>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
-            KI-RBSET 2026 Report & Statistics
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base">
-            The following report provides a comprehensive overview of the
-            competition's performance, including participant statistics,
-            evaluation results, and other relevant data.
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-brand-light text-brand-blue flex items-center justify-center text-2xl"
+          >
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Countries -->
+      <div
+        class="bg-white border border-brand-cyan/20 rounded-3xl p-6 shadow-sm hover:shadow-brand transition-all duration-300"
+      >
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm font-semibold text-slate-500 mb-2">
+              Total Countries
+            </p>
+
+            <h3
+              id="stat-total-countries"
+              class="text-4xl font-extrabold text-slate-900"
+            >
+              --
+            </h3>
+
+            <p class="text-xs text-slate-500 mt-2">
+              Countries visiting the KI-RBSET website
+            </p>
+          </div>
+
+          <div
+            class="w-14 h-14 rounded-2xl bg-brand-light text-brand-cyan flex items-center justify-center text-2xl"
+          >
+            <i class="fa-solid fa-earth-asia"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Map -->
+      <div
+        class="lg:col-span-2 bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
+      >
+        <div
+          class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5"
+        >
+          <div>
+            <h3 class="text-lg font-extrabold text-slate-900">
+              <i class="fa-solid fa-earth-americas text-brand-cyan mr-2"></i>
+              Visitor Distribution Map
+            </h3>
+
+            <p class="text-xs text-slate-500 mt-1">
+              Geographic distribution based on Google Analytics data
+            </p>
+          </div>
+
+          <span
+            class="px-3 py-1.5 rounded-full bg-brand-lighter text-brand-blue text-xs font-bold border border-brand-cyan/20"
+          >
+            Live Analytics
+          </span>
+        </div>
+
+        <!-- Looker Studio Map / Report -->
+        <div
+          class="rounded-2xl overflow-hidden border border-slate-100 bg-slate-50"
+        >
+          <iframe
+            class="w-full h-[500px]"
+            src="https://datastudio.google.com/embed/reporting/ed89d230-c7e5-4e64-aa37-0c08d6956b64/page/Edy6F"
+            frameborder="0"
+            style="border: 0"
+            allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Countries -->
+      <div
+        class="bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
+      >
+        <div class="mb-6">
+          <h3 class="text-lg font-extrabold text-slate-900">
+            <i class="fa-solid fa-flag text-brand-cyan mr-2"></i>
+            Visitors by Country
+          </h3>
+
+          <p class="text-xs text-slate-500 mt-1">
+            Number of users from each country
           </p>
         </div>
 
-        <!-- Embed Google Data Studio Report -->  
-      <iframe class="w-full h-[600px] shadow-sm hover:shadow-brand transition-all duration-300" 
-              src="https://datastudio.google.com/embed/reporting/ed89d230-c7e5-4e64-aa37-0c08d6956b64/page/Edy6F" 
-              frameborder="0" 
-              style="border:0" 
-              allowfullscreen 
-              sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
-    </section>
+        <!-- Country List -->
+        <div id="country-stat-list" class="space-y-6">
+          <!-- Loading -->
+          <div class="text-center py-10">
+            <i
+              class="fa-solid fa-spinner fa-spin text-2xl text-brand-cyan mb-3"
+            ></i>
+
+            <p class="text-sm text-slate-500">
+              Loading country statistics...
+            </p>
+          </div>
+        </div>
+
+        <!-- Country Summary -->
+        <div
+          class="mt-8 p-4 rounded-2xl bg-brand-lighter border border-brand-cyan/20"
+        >
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-xs text-slate-500">Countries</p>
+
+              <p
+                id="country-summary-count"
+                class="text-xl font-extrabold text-brand-dark"
+              >
+                --
+              </p>
+            </div>
+
+            <div class="text-right">
+              <p class="text-xs text-slate-500">Total Users</p>
+
+              <p
+                id="country-summary-users"
+                class="text-xl font-extrabold text-brand-blue"
+              >
+                --
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data Source Information -->
+    <div
+      class="mt-8 bg-white border border-brand-cyan/20 rounded-2xl p-5 shadow-sm"
+    >
+      <div class="flex items-start gap-4">
+        <div
+          class="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center shrink-0"
+        >
+          <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-slate-800">
+            About This Data
+          </h4>
+
+          <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
+            Website traffic statistics are collected through Google Analytics.
+            Country statistics will be automatically updated after the Google
+            Analytics Data API is connected.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <footer class="py-12 bg-slate-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -2073,7 +2262,7 @@
       }
 
       function updateCountdown() {
-        const targetDate = new Date("August 31, 2026 23:59:59").getTime();
+        const targetDate = new Date("September 8, 2026 23:59:59").getTime();
         const now = new Date().getTime();
         const difference = targetDate - now;
 
@@ -2111,5 +2300,164 @@
       setInterval(updateCountdown, 1000);
       updateCountdown();
     </script>
+    <script>
+  function countryCodeToFlag(code) {
+    if (!code || code.length !== 2) {
+      return "🌍";
+    }
+
+    return code
+      .toUpperCase()
+      .replace(/./g, (char) =>
+        String.fromCodePoint(127397 + char.charCodeAt())
+      );
+  }
+
+  function formatNumber(value) {
+    return new Intl.NumberFormat("en-US").format(value);
+  }
+
+  async function loadAnalyticsStatistics() {
+    const totalUsersElement =
+      document.getElementById("stat-total-users");
+
+    const totalCountriesElement =
+      document.getElementById("stat-total-countries");
+
+    const countrySummaryCount =
+      document.getElementById("country-summary-count");
+
+    const countrySummaryUsers =
+      document.getElementById("country-summary-users");
+
+    const countryList =
+      document.getElementById("country-stat-list");
+
+    try {
+      const response = await fetch("/api/analytics");
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch analytics");
+      }
+
+      const data = await response.json();
+
+      totalUsersElement.textContent =
+        formatNumber(data.totalUsers);
+
+      totalCountriesElement.textContent =
+        formatNumber(data.totalCountries);
+
+      countrySummaryCount.textContent =
+        formatNumber(data.totalCountries);
+
+      countrySummaryUsers.textContent =
+        formatNumber(data.totalUsers);
+
+      if (!data.countries || data.countries.length === 0) {
+        countryList.innerHTML = `
+          <div class="text-center py-10">
+            <i class="fa-solid fa-earth-asia text-3xl text-slate-300 mb-3"></i>
+
+            <p class="text-sm text-slate-500">
+              No country data available yet.
+            </p>
+          </div>
+        `;
+
+        return;
+      }
+
+      countryList.innerHTML = data.countries
+        .map((country) => {
+          const flag = countryCodeToFlag(country.code);
+
+          return `
+            <div>
+              <div class="flex items-center justify-between gap-3 mb-2">
+                <div class="flex items-center gap-3 min-w-0">
+                  <div
+                    class="w-10 h-10 flex items-center justify-center
+                    rounded-xl bg-slate-50 border border-slate-100
+                    text-2xl shrink-0"
+                  >
+                    ${flag}
+                  </div>
+
+                  <div class="min-w-0">
+                    <p
+                      class="font-bold text-sm text-slate-800 truncate"
+                    >
+                      ${country.name}
+                    </p>
+
+                    <p class="text-xs text-slate-500">
+                      ${country.percentage}%
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-right shrink-0">
+                  <p class="font-extrabold text-slate-900">
+                    ${formatNumber(country.users)}
+                  </p>
+
+                  <p class="text-[11px] text-slate-400">
+                    users
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="w-full h-2 bg-slate-100 rounded-full overflow-hidden"
+              >
+                <div
+                  class="h-full rounded-full bg-brand-cyan
+                  transition-all duration-700"
+                  style="width: ${Math.min(
+                    country.percentage,
+                    100
+                  )}%"
+                ></div>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+    } catch (error) {
+      console.error(error);
+
+      totalUsersElement.textContent = "--";
+      totalCountriesElement.textContent = "--";
+      countrySummaryCount.textContent = "--";
+      countrySummaryUsers.textContent = "--";
+
+      countryList.innerHTML = `
+        <div
+          class="p-4 rounded-2xl bg-red-50 border border-red-100
+          text-center"
+        >
+          <i
+            class="fa-solid fa-triangle-exclamation
+            text-red-400 text-xl mb-2"
+          ></i>
+
+          <p class="text-sm font-semibold text-red-600">
+            Analytics data could not be loaded.
+          </p>
+
+          <p class="text-xs text-red-400 mt-1">
+            Please try again later.
+          </p>
+        </div>
+      `;
+    }
+  }
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    loadAnalyticsStatistics
+  );
+</script>
   </body>
 </html>
