@@ -1,9 +1,14 @@
 const { BetaAnalyticsDataClient } = require("@google-analytics/data");
 
+const privateKey = process.env.GA_PRIVATE_KEY
+  ?.replace(/^["']|["']$/g, "")
+  .replace(/\\n/g, "\n")
+  .trim();
+
 const analyticsDataClient = new BetaAnalyticsDataClient({
   credentials: {
     client_email: process.env.GA_CLIENT_EMAIL,
-    private_key: process.env.GA_PRIVATE_KEY?.replace(/\\n/g, "\n"),
+    private_key: privateKey,
   },
 });
 
