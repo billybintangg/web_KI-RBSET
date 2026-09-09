@@ -103,7 +103,12 @@
         background: #0073b7;
       }
     </style>
-  </head>
+  
+<style>
+.people-section{scroll-margin-top:100px}.people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.person-card{background:white;border:1px solid #dcecf3;border-radius:22px;padding:24px;min-width:0}.person-photo{height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-radius:14px;background:linear-gradient(145deg,#edfaff,#dcecf7);color:#17648a;margin-bottom:22px}.person-photo strong{font-size:44px;letter-spacing:3px}.person-photo span{font-size:13px}.person-card h3{font-size:20px;font-weight:800;color:#102b47}.person-role{color:#0284a8;font-size:14px;font-weight:700;margin-bottom:8px}.person-card p{font-size:14px;line-height:1.75}.person-card details{margin-top:16px;border-top:1px solid #e2edf2;padding-top:14px}.person-card summary{cursor:pointer;font-size:14px;color:#03688e;font-weight:700}.person-card details p{margin-top:10px;color:#536678}.people-note{display:inline-block;background:#fff4db;color:#805519;border:1px solid #f2dfb3;border-radius:10px;padding:10px 14px;font-size:14px;margin-top:18px}.people-heading{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.03em;color:#102b47}.judges-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:880px;margin:auto}.judges-grid .person-photo{height:220px}.partner-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;align-items:center}.people-nav{position:relative}.people-nav summary{cursor:pointer;white-space:nowrap;font-size:14px;font-weight:600;color:#334155}.people-nav-menu{position:absolute;right:0;top:34px;min-width:200px;padding:8px;background:white;border:1px solid #dcecf3;border-radius:12px;box-shadow:0 10px 30px #102b471a}.people-nav-menu a{display:block;padding:10px 12px;font-size:14px;color:#334155}.people-nav-menu a:hover{background:#edfaff}.people-section summary:focus-visible,.people-section a:focus-visible,.people-nav summary:focus-visible{outline:3px solid #0891b2;outline-offset:4px}
+@media(max-width:1023px){.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:639px){.people-grid,.judges-grid,.partner-layout{grid-template-columns:1fr}.person-photo{height:150px}}
+</style>
+</head>
   <body
     class="font-sans text-lg bg-slate-50 text-slate-800 antialiased selection:bg-brand-cyan selection:text-white"
   >
@@ -134,7 +139,7 @@
           </a>
 
           <!-- Desktop Menu -->
-          <nav class="hidden md:flex items-center space-x-8">
+          <nav class="hidden xl:flex items-center gap-4">
             <a
               href="#home"
               class="text-sm font-semibold text-slate-700 hover:text-brand-cyan transition-colors"
@@ -175,10 +180,13 @@
               class="text-sm font-semibold text-slate-700 hover:text-brand-cyan transition-colors"
               >Report</a
             >
+<!-- PEOPLE & PARTNERS: temporarily disabled
+<details class="people-nav"><summary>People &amp; Partners</summary><div class="people-nav-menu"><a href="#committee">Committee</a><a href="#judges">Judges</a><a href="#partners">Publication Partner</a></div></details>
+-->
           </nav>
 
           <!-- Header CTA Button -->
-          <div class="hidden md:flex items-center space-x-4">
+          <div class="hidden xl:flex items-center space-x-4">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSd5KhGvsJviFYpABNBcRsvFkWbCcwbVPVXhRxq1UC4WAUlhug/viewform?usp=dialog"
               class="px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gradient hover:opacity-95 shadow-brand shadow-brand-hover transition-all flex items-center space-x-2"
@@ -191,7 +199,7 @@
           <!-- Mobile Menu Button -->
           <button
             id="mobile-menu-btn"
-            class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-brand-light focus:outline-none"
+            class="xl:hidden p-2 rounded-lg text-slate-700 hover:bg-brand-light focus:outline-none"
             aria-label="Toggle menu"
           >
             <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
@@ -202,7 +210,7 @@
       <!-- Mobile Menu Dropdown -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white border-b border-brand-cyan/20 px-4 pt-2 pb-6 space-y-3"
+        class="hidden xl:hidden bg-white border-b border-brand-cyan/20 px-4 pt-2 pb-6 space-y-3"
       >
         <a
           href="#home"
@@ -244,6 +252,13 @@
           class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-light hover:text-brand-cyan"
           >Report</a
         >
+<!-- PEOPLE & PARTNERS: temporarily disabled
+<a href="#committee" class="block px-4 py-3 text-sm font-semibold text-slate-700">Committee</a>
+--><!-- PEOPLE & PARTNERS: temporarily disabled
+<a href="#judges" class="block px-4 py-3 text-sm font-semibold text-slate-700">Judges</a>
+--><!-- PEOPLE & PARTNERS: temporarily disabled
+<a href="#partners" class="block px-4 py-3 text-sm font-semibold text-slate-700">Publication Partner</a>
+-->
         <div class="pt-2">
           <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSd5KhGvsJviFYpABNBcRsvFkWbCcwbVPVXhRxq1UC4WAUlhug/viewform?usp=dialog"
@@ -302,7 +317,7 @@
                 <span>Register for Competition</span>
               </a>
               <a
-                href="https://heyzine.com/flip-book/239a4befb3.html"
+                href="https://heyzine.com/flip-book/9e877eef81.html"
                 class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-brand-blue bg-white border border-brand-cyan/30 hover:bg-brand-light transition-all flex items-center justify-center space-x-3 shadow-sm"
               >
                 <i class="fa-solid fa-file-arrow-down text-brand-cyan"></i>
@@ -356,7 +371,7 @@
                   class="flex items-center justify-center space-x-2 text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-4"
                 >
                   <i class="fa-regular fa-clock text-brand-cyan text-base"></i>
-                  <span>Team Registration Deadline: September 8, 2026</span>
+                  <span>Team Registration Deadline: September 10, 2026</span>
                 </div>
 
                 <!-- Timer Display Cards -->
@@ -882,12 +897,12 @@
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>August 23–Sept 8, 2026</span>
+                <span>August 23–September 8, 2026</span>
               </div>
             </div>
           </div>
 
-          <!-- Fase 3: Abstract Deadline -->
+          <!-- Fase 3: Abstract Submission Deadline -->
           <div
             class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group mb-12"
           >
@@ -905,13 +920,13 @@
               <h3
                 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-brand-blue transition-colors relative z-10"
               >
-                Abstract Deadline
+                Abstract Submission Deadline
               </h3>
               <div
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>Sept 8–Sept 10, 2026</span>
+                <span>September 8–16, 2026</span>
               </div>
             </div>
           </div>
@@ -940,7 +955,7 @@
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>September 12, 2026</span>
+                <span>September 16, 2026</span>
               </div>
             </div>
           </div>
@@ -963,13 +978,13 @@
               <h3
                 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-brand-blue transition-colors relative z-10"
               >
-                Re-registration (Payment for publication purposes)
+                Re-registration (Payment for Publication Purposes)
               </h3>
               <div
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>September 13–14, 2026</span>
+                <span>September 16–18, 2026</span>
               </div>
             </div>
           </div>
@@ -1471,7 +1486,7 @@
 
             <div class="pt-6 border-t border-slate-100 space-y-3">
               <a
-                href="https://heyzine.com/flip-book/239a4befb3.html"
+                href="https://heyzine.com/flip-book/9e877eef81.html"
                 class="w-full py-3 px-4 rounded-xl bg-brand-gradient text-white text-xs font-bold hover:opacity-95 shadow-brand transition-all flex items-center justify-center space-x-2"
               >
                 <i class="fa-solid fa-download"></i>
@@ -1553,6 +1568,17 @@
       </div>
     </section>
 
+
+<!-- Provisional people content: replace before publication. -->
+<!-- PEOPLE & PARTNERS: temporarily disabled
+<section id="committee" class="people-section py-20 bg-slate-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="mb-10"><p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">The organizing team</p><h2 class="people-heading">Organizing Committee</h2></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Visual Design &amp; Publications</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Firdhie"><strong aria-hidden="true">F</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Firdhie</h4><p class="person-role mt-2">Visual Design &amp; Publications</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Lutfie"><strong aria-hidden="true">L</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Lutfie</h4><p class="person-role mt-2">Visual Design &amp; Publications</p></article></div></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Finance</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Wilda"><strong aria-hidden="true">W</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Wilda</h4><p class="person-role mt-2">Finance</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Nindia"><strong aria-hidden="true">N</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Nindia</h4><p class="person-role mt-2">Finance</p></article></div></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Sponsorship &amp; Media Partnerships</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Putri"><strong aria-hidden="true">P</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Putri</h4><p class="person-role mt-2">Sponsorship &amp; Media Partnerships</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Cut Widia"><strong aria-hidden="true">CW</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Cut Widia</h4><p class="person-role mt-2">Sponsorship &amp; Media Partnerships</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Anton"><strong aria-hidden="true">A</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Anton</h4><p class="person-role mt-2">Sponsorship &amp; Media Partnerships</p></article></div></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Website Development</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Billy Bintang Jatmiko"><strong aria-hidden="true">BBJ</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Billy Bintang Jatmiko</h4><p class="person-role mt-2">Website Development</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Rizal Fahmi"><strong aria-hidden="true">RF</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Rizal Fahmi</h4><p class="person-role mt-2">Website Development</p></article></div></div></div></section>
+-->
+<!-- PEOPLE & PARTNERS: temporarily disabled
+<section id="judges" class="people-section py-20" style="background:#eaf5fc"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-10"><p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">Meet the jury</p><h2 class="people-heading">Panel of Judges</h2><p class="people-note">Provisional profiles — official photos and credentials will be added.</p></div><div class="judges-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Pak Arya"><strong aria-hidden="true">A</strong><span>Official photo to be added</span></div><div class="person-role">Jury member · provisional profile</div><h3>Pak Arya</h3><p class="text-slate-500 mt-2">Full name, title and institution to be confirmed.</p><p class="mt-4 text-slate-600"><strong>Expertise:</strong> To be confirmed.</p><details><summary>View provisional profile</summary><p>This profile is reserved for Pak Arya. The official biography and research expertise will be added after confirmation.</p></details></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Pak Catur"><strong aria-hidden="true">C</strong><span>Official photo to be added</span></div><div class="person-role">Jury member · provisional profile</div><h3>Pak Catur</h3><p class="text-slate-500 mt-2">Full name, title and institution to be confirmed.</p><p class="mt-4 text-slate-600"><strong>Expertise:</strong> To be confirmed.</p><details><summary>View provisional profile</summary><p>This profile is reserved for Pak Catur. The official biography and research expertise will be added after confirmation.</p></details></article></div></div></section>
+-->
+<!-- PEOPLE & PARTNERS: temporarily disabled
+<section id="partners" class="people-section py-20 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="partner-layout rounded-3xl border border-slate-200 p-6 sm:p-10"><div class="bg-white rounded-2xl p-8 flex justify-center"><img src="src/Assets/semarak-ilmu.jpeg" alt="Semarak Ilmu — Research & Publication" loading="lazy" style="width:260px;max-width:100%;height:auto;object-fit:contain"></div><div><p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">Publication collaboration</p><h2 class="people-heading">Semarak Ilmu</h2><p class="text-slate-600 mt-5 leading-relaxed">Semarak Ilmu is the paper publication partner for KI-RBSET. Details about the publication process and requirements will be announced by the organizing committee.</p><a href="https://semarakilmu.com.my/" target="_blank" rel="noopener noreferrer" class="inline-flex mt-6 px-6 py-3 rounded-xl bg-brand-blue text-white font-bold">Visit Semarak Ilmu <span class="sr-only">(opens in a new tab)</span></a></div></div></div></section>
+-->
     <section id="faq" class="py-20 bg-white border-b border-slate-100">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center space-y-3 mb-12">
@@ -1721,7 +1747,7 @@
     </div>
 
     <!-- Main Dashboard -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
       <!-- Map -->
       <div
         class="lg:col-span-2 bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
@@ -1743,24 +1769,13 @@
           <span
             class="px-3 py-1.5 rounded-full bg-brand-lighter text-brand-blue text-xs font-bold border border-brand-cyan/20"
           >
-            Live Analytics
+            Google Analytics
           </span>
         </div>
 
-        <!-- Looker Studio Map / Report -->
-        <div
-          class="rounded-2xl overflow-hidden border border-slate-100 bg-slate-50"
-        >
-          <iframe
-            class="w-full h-[500px]"
-            src="https://datastudio.google.com/embed/reporting/ed89d230-c7e5-4e64-aa37-0c08d6956b64/page/Edy6F"
-            frameborder="0"
-            style="border: 0"
-            allowfullscreen
-            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-          >
-          </iframe>
-        </div>
+        <div id="analytics-map" role="img" aria-label="World map of users by country; details in the country list" style="width:100%;height:clamp(240px,38vw,400px);overflow:hidden"></div>
+        <p id="analytics-map-status" role="status" class="text-sm text-slate-500 mt-3">Loading visitor map...</p>
+        <button id="analytics-map-retry" type="button" hidden class="mt-3 px-4 py-2 rounded-lg border text-sm font-bold">Retry map</button>
       </div>
 
       <!-- Countries -->
@@ -1779,7 +1794,7 @@
         </div>
 
         <!-- Country List -->
-        <div id="country-stat-list" class="space-y-6">
+        <div id="country-stat-list" aria-live="polite" tabindex="0" aria-label="Users by country, scroll for more" class="space-y-6" style="max-height:320px;overflow-y:auto;padding-right:10px;overscroll-behavior:contain">
           <!-- Loading -->
           <div class="text-center py-10">
             <i
@@ -1841,8 +1856,7 @@
 
           <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
             Website traffic statistics are collected through Google Analytics.
-            Country statistics will be automatically updated after the Google
-            Analytics Data API is connected.
+            The map, cards and country statistics use the same data, covering January 1, 2026 to today. Data may be cached for up to an hour. Country percentages show the share of country counts; a user may appear in more than one country.
           </p>
         </div>
       </div>
@@ -1996,18 +2010,17 @@
           </div>
           <h3 class="text-xl font-bold text-slate-900">KI-RBSET Guidebook</h3>
           <p class="text-xs text-slate-600">
-            Download complete guidelines for technical writing and competition
+            Read the complete guidelines for technical writing and competition
             registration.
           </p>
         </div>
         <div class="space-y-3">
-          <button
-            onclick="downloadBook()"
+          <a href="https://heyzine.com/flip-book/9e877eef81.html" target="_blank" rel="noopener noreferrer"
             class="w-full py-3 rounded-xl bg-brand-gradient text-white font-bold text-sm shadow-brand hover:opacity-95 transition-all flex items-center justify-center space-x-2"
           >
             <i class="fa-solid fa-download"></i>
-            <span>Download PDF Guide (3.2 MB)</span>
-          </button>
+            <span>Open Guidebook</span>
+          </a>
         </div>
       </div>
     </div>
@@ -2257,12 +2270,12 @@
       }
 
       function downloadBook() {
-        alert("Downloading KI-RBSET 2026 Guidebook...");
+        window.open("https://heyzine.com/flip-book/9e877eef81.html", "_blank", "noopener,noreferrer");
         closePanduanModal();
       }
 
       function updateCountdown() {
-        const targetDate = new Date("September 8, 2026 23:59:59").getTime();
+        const targetDate = new Date("September 10, 2026 12:00:00").getTime();
         const now = new Date().getTime();
         const difference = targetDate - now;
 
@@ -2302,7 +2315,7 @@
     </script>
     <script>
   function countryCodeToFlag(code) {
-    if (!code || code.length !== 2) {
+    if (!/^[a-z]{2}$/i.test(code)) {
       return "🌍";
     }
 
@@ -2316,6 +2329,75 @@
   function formatNumber(value) {
     return new Intl.NumberFormat("en-US").format(value);
   }
+
+  function escapeAnalyticsText(value) {
+    const node = document.createElement("span");
+    node.textContent = value;
+    return node.innerHTML;
+  }
+
+  let analyticsMapRows = [];
+  let analyticsMapLoader;
+  let analyticsMapGeneration = 0;
+  function loadMapLibrary() {
+    if (window.google?.visualization?.GeoChart) return Promise.resolve();
+    if (analyticsMapLoader) return analyticsMapLoader;
+    analyticsMapLoader = new Promise((resolve, reject) => {
+      const timer = setTimeout(() => reject(new Error("Map timeout")), 15000);
+      const failed = () => { clearTimeout(timer); reject(new Error("Map unavailable")); };
+      const load = () => {
+        try {
+          google.charts.load('current', {packages: ['geochart']});
+          google.charts.setOnLoadCallback(() => { clearTimeout(timer); resolve(); });
+        } catch { failed(); }
+      };
+      if (window.google?.charts) return load();
+      const script = document.createElement('script');
+      script.src = 'https://www.gstatic.com/charts/loader.js';
+      script.onload = load;
+      script.onerror = failed;
+      document.head.appendChild(script);
+    }).catch(error => { analyticsMapLoader = null; throw error; });
+    return analyticsMapLoader;
+  }
+  async function drawAnalyticsMap() {
+    const generation = ++analyticsMapGeneration;
+    const container = document.getElementById('analytics-map');
+    const status = document.getElementById('analytics-map-status');
+    const retry = document.getElementById('analytics-map-retry');
+    retry.hidden = true;
+    container.replaceChildren();
+    if (!analyticsMapRows.length) {
+      status.textContent = 'No country locations to display yet.';
+      return;
+    }
+    status.textContent = 'Loading visitor map...';
+    const failed = () => {
+      if (generation !== analyticsMapGeneration) return;
+      container.replaceChildren();
+      status.textContent = 'Map unavailable. You can still read all country statistics in the list.';
+      retry.hidden = false;
+    };
+    try {
+      await loadMapLibrary();
+      if (generation !== analyticsMapGeneration) return;
+      const table = google.visualization.arrayToDataTable([['Country', 'Users'], ...analyticsMapRows]);
+      const chart = new google.visualization.GeoChart(container);
+      google.visualization.events.addListener(chart, 'error', failed);
+      google.visualization.events.addListener(chart, 'ready', () => {
+        if (generation === analyticsMapGeneration) status.textContent = 'Point to a country to see its users. Gray indicates no country data.';
+      });
+      chart.draw(table, {displayMode:'regions', resolution:'countries', backgroundColor:'#ffffff',
+        datalessRegionColor:'#e2e8f0', colorAxis:{colors:['#a5e5ee','#0284c7']},
+        width:container.clientWidth, height:container.clientHeight, keepAspectRatio:true});
+    } catch { failed(); }
+  }
+  document.getElementById('analytics-map-retry').addEventListener('click', drawAnalyticsMap);
+  let mapResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(mapResizeTimer);
+    mapResizeTimer = setTimeout(() => { if (analyticsMapRows.length) drawAnalyticsMap(); }, 200);
+  });
 
   async function loadAnalyticsStatistics() {
     const totalUsersElement =
@@ -2333,14 +2415,30 @@
     const countryList =
       document.getElementById("country-stat-list");
 
+    analyticsMapRows = [];
+    ++analyticsMapGeneration;
+    document.getElementById('analytics-map').replaceChildren();
+    document.getElementById('analytics-map-status').textContent = 'Loading visitor map...';
+    document.getElementById('analytics-map-retry').hidden = true;
+    countryList.innerHTML = '<p class="text-sm text-slate-500" role="status">Loading country statistics...</p>';
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
     try {
-      const response = await fetch("/api/analytics");
+      const response = await fetch("/api/analytics", { signal: controller.signal });
 
       if (!response.ok) {
         throw new Error("Failed to fetch analytics");
       }
 
       const data = await response.json();
+      const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
+      if (!isCount(data.totalUsers) || !isCount(data.totalCountries) ||
+          !Array.isArray(data.countries) || data.countries.some((country) =>
+            typeof country.name !== "string" || typeof country.code !== "string" ||
+            !isCount(country.users) || !Number.isFinite(country.percentage) ||
+            country.percentage < 0 || country.percentage > 100)) {
+        throw new Error("Invalid analytics response");
+      }
 
       totalUsersElement.textContent =
         formatNumber(data.totalUsers);
@@ -2353,6 +2451,11 @@
 
       countrySummaryUsers.textContent =
         formatNumber(data.totalUsers);
+
+      analyticsMapRows = data.countries
+        .filter(country => /^[A-Z]{2}$/.test(country.code) && country.users > 0)
+        .map(country => [{v:country.code, f:country.name}, country.users]);
+      drawAnalyticsMap();
 
       if (!data.countries || data.countries.length === 0) {
         countryList.innerHTML = `
@@ -2388,7 +2491,7 @@
                     <p
                       class="font-bold text-sm text-slate-800 truncate"
                     >
-                      ${country.name}
+                      ${escapeAnalyticsText(country.name)}
                     </p>
 
                     <p class="text-xs text-slate-500">
@@ -2426,6 +2529,7 @@
         .join("");
     } catch (error) {
       console.error(error);
+      document.getElementById('analytics-map-status').textContent = 'Visitor data could not be loaded. Use Try again in the country list.';
 
       totalUsersElement.textContent = "--";
       totalCountriesElement.textContent = "--";
@@ -2447,10 +2551,14 @@
           </p>
 
           <p class="text-xs text-red-400 mt-1">
-            Please try again later.
+            Please try loading these statistics again.
           </p>
+          <button type="button" id="analytics-retry" class="mt-3 px-4 py-2 rounded-lg bg-white border border-red-200 text-sm font-bold text-red-600">Try again</button>
         </div>
       `;
+      document.getElementById("analytics-retry").addEventListener("click", loadAnalyticsStatistics);
+    } finally {
+      clearTimeout(timeout);
     }
   }
 
