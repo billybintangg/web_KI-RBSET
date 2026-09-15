@@ -103,10 +103,203 @@
         background: #0073b7;
       }
     </style>
-  
+
+    <style>
+      .people-section {
+        scroll-margin-top: 100px;
+      }
+      .people-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+      .person-card {
+        background: white;
+        border: 1px solid #dcecf3;
+        border-radius: 22px;
+        padding: 24px;
+        min-width: 0;
+      }
+      .person-photo {
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        border-radius: 14px;
+        background: linear-gradient(145deg, #edfaff, #dcecf7);
+        color: #17648a;
+        margin-bottom: 22px;
+      }
+      .person-photo strong {
+        font-size: 44px;
+        letter-spacing: 3px;
+      }
+      .person-photo span {
+        font-size: 13px;
+      }
+      .person-card h3 {
+        font-size: 20px;
+        font-weight: 800;
+        color: #102b47;
+      }
+      .person-role {
+        color: #0284a8;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+      .person-card p {
+        font-size: 14px;
+        line-height: 1.75;
+      }
+      .person-card details {
+        margin-top: 16px;
+        border-top: 1px solid #e2edf2;
+        padding-top: 14px;
+      }
+      .person-card summary {
+        cursor: pointer;
+        font-size: 14px;
+        color: #03688e;
+        font-weight: 700;
+      }
+      .person-card details p {
+        margin-top: 10px;
+        color: #536678;
+      }
+      .people-note {
+        display: inline-block;
+        background: #fff4db;
+        color: #805519;
+        border: 1px solid #f2dfb3;
+        border-radius: 10px;
+        padding: 10px 14px;
+        font-size: 14px;
+        margin-top: 18px;
+      }
+      .people-heading {
+        font-size: clamp(28px, 4vw, 40px);
+        font-weight: 800;
+        letter-spacing: -0.03em;
+        color: #102b47;
+      }
+      .judges-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        max-width: 880px;
+        margin: auto;
+      }
+      .judges-grid .person-photo {
+        height: 220px;
+      }
+      .partner-layout {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 40px;
+        align-items: center;
+      }
+      .people-nav {
+        position: relative;
+      }
+      .people-nav summary {
+        cursor: pointer;
+        white-space: nowrap;
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+      }
+      .people-nav-menu {
+        position: absolute;
+        right: 0;
+        top: 34px;
+        min-width: 200px;
+        padding: 8px;
+        background: white;
+        border: 1px solid #dcecf3;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px #102b471a;
+      }
+      .people-nav-menu a {
+        display: block;
+        padding: 10px 12px;
+        font-size: 14px;
+        color: #334155;
+      }
+      .people-nav-menu a:hover {
+        background: #edfaff;
+      }
+      .people-section summary:focus-visible,
+      .people-section a:focus-visible,
+      .people-nav summary:focus-visible {
+        outline: 3px solid #0891b2;
+        outline-offset: 4px;
+      }
+      @media (max-width: 1023px) {
+        .people-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+      @media (max-width: 639px) {
+        .people-grid,
+        .judges-grid,
+        .partner-layout {
+          grid-template-columns: 1fr;
+        }
+        .person-photo {
+          height: 150px;
+        }
+      }
+    </style>
+    <style>
+      .abstract-disabled {
+        opacity: 0.55;
+        pointer-events: none;
+        cursor: not-allowed;
+      }
+    </style>
+    <style>
+      .judges-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: 1200px;
+        align-items: start;
+      }
+      .judges-grid .person-card h3 {
+        overflow-wrap: anywhere;
+        line-height: 1.4;
+      }
+      .judges-grid .person-photo {
+        height: 260px;
+      }
+      .judges-grid .judge-portrait {
+        background: #fff;
+        overflow: hidden;
+      }
+      .judge-portrait img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      @media (max-width: 1023px) {
+        .judges-grid {
+          grid-template-columns: 1fr;
+          max-width: 560px;
+        }
+      }
+    </style>
+  <style>
+.judge-research{margin-top:18px;padding-top:16px;border-top:1px solid #dcecf3}.judge-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.judge-metrics dt{font-size:13px;color:#536678}.judge-metrics dd{margin:4px 0 0;font-size:24px;font-weight:800;color:#102b47}.judge-research .judge-source{font-size:12px;color:#64748b}.judge-research a{color:#03688e;text-decoration:underline;text-underline-offset:3px}
+</style>
 <style>
-.people-section{scroll-margin-top:100px}.people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}.person-card{background:white;border:1px solid #dcecf3;border-radius:22px;padding:24px;min-width:0}.person-photo{height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border-radius:14px;background:linear-gradient(145deg,#edfaff,#dcecf7);color:#17648a;margin-bottom:22px}.person-photo strong{font-size:44px;letter-spacing:3px}.person-photo span{font-size:13px}.person-card h3{font-size:20px;font-weight:800;color:#102b47}.person-role{color:#0284a8;font-size:14px;font-weight:700;margin-bottom:8px}.person-card p{font-size:14px;line-height:1.75}.person-card details{margin-top:16px;border-top:1px solid #e2edf2;padding-top:14px}.person-card summary{cursor:pointer;font-size:14px;color:#03688e;font-weight:700}.person-card details p{margin-top:10px;color:#536678}.people-note{display:inline-block;background:#fff4db;color:#805519;border:1px solid #f2dfb3;border-radius:10px;padding:10px 14px;font-size:14px;margin-top:18px}.people-heading{font-size:clamp(28px,4vw,40px);font-weight:800;letter-spacing:-.03em;color:#102b47}.judges-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;max-width:880px;margin:auto}.judges-grid .person-photo{height:220px}.partner-layout{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;align-items:center}.people-nav{position:relative}.people-nav summary{cursor:pointer;white-space:nowrap;font-size:14px;font-weight:600;color:#334155}.people-nav-menu{position:absolute;right:0;top:34px;min-width:200px;padding:8px;background:white;border:1px solid #dcecf3;border-radius:12px;box-shadow:0 10px 30px #102b471a}.people-nav-menu a{display:block;padding:10px 12px;font-size:14px;color:#334155}.people-nav-menu a:hover{background:#edfaff}.people-section summary:focus-visible,.people-section a:focus-visible,.people-nav summary:focus-visible{outline:3px solid #0891b2;outline-offset:4px}
-@media(max-width:1023px){.people-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:639px){.people-grid,.judges-grid,.partner-layout{grid-template-columns:1fr}.person-photo{height:150px}}
+.committee-directory{background:#fff;border:1px solid #dcecf3;border-radius:22px;padding:8px 32px}
+.committee-row{display:grid;grid-template-columns:minmax(200px,1fr) minmax(0,2fr);gap:24px;padding:24px 0;border-bottom:1px solid #e2edf2}
+.committee-row:last-child{border-bottom:0}
+.committee-row h3{margin:0;font-size:16px;line-height:1.6;font-weight:800;color:#03688e}
+.committee-row ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.committee-row li{font-size:16px;line-height:1.65;color:#1e293b;overflow-wrap:anywhere}
+@media(max-width:639px){.committee-directory{padding:4px 20px}.committee-row{grid-template-columns:1fr;gap:10px;padding:20px 0}}
 </style>
 </head>
   <body
@@ -180,18 +373,23 @@
               class="text-sm font-semibold text-slate-700 hover:text-brand-cyan transition-colors"
               >Report</a
             >
-<!-- PEOPLE & PARTNERS: temporarily disabled
-<details class="people-nav"><summary>People &amp; Partners</summary><div class="people-nav-menu"><a href="#committee">Committee</a><a href="#judges">Judges</a><a href="#partners">Publication Partner</a></div></details>
--->
+            <details class="people-nav">
+              <summary>People &amp; Partners</summary>
+              <div class="people-nav-menu">
+                <a href="#committee">Committee</a><a href="#judges">Judges</a
+                ><a href="#partners">Publication Partner</a>
+              </div>
+            </details>
           </nav>
 
           <!-- Header CTA Button -->
           <div class="hidden xl:flex items-center space-x-4">
             <a
+              data-abstract-submit
               href="https://docs.google.com/forms/d/e/1FAIpQLSd5KhGvsJviFYpABNBcRsvFkWbCcwbVPVXhRxq1UC4WAUlhug/viewform?usp=dialog"
               class="px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gradient hover:opacity-95 shadow-brand shadow-brand-hover transition-all flex items-center space-x-2"
             >
-              <span>Register Now</span>
+              <span>Submit Abstract</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -252,18 +450,25 @@
           class="block px-3 py-2 rounded-lg text-base font-semibold text-slate-700 hover:bg-brand-light hover:text-brand-cyan"
           >Report</a
         >
-<!-- PEOPLE & PARTNERS: temporarily disabled
-<a href="#committee" class="block px-4 py-3 text-sm font-semibold text-slate-700">Committee</a>
---><!-- PEOPLE & PARTNERS: temporarily disabled
-<a href="#judges" class="block px-4 py-3 text-sm font-semibold text-slate-700">Judges</a>
---><!-- PEOPLE & PARTNERS: temporarily disabled
-<a href="#partners" class="block px-4 py-3 text-sm font-semibold text-slate-700">Publication Partner</a>
--->
+        <a
+          href="#committee"
+          class="block px-4 py-3 text-sm font-semibold text-slate-700"
+          >Committee</a
+        ><a
+          href="#judges"
+          class="block px-4 py-3 text-sm font-semibold text-slate-700"
+          >Judges</a
+        ><a
+          href="#partners"
+          class="block px-4 py-3 text-sm font-semibold text-slate-700"
+          >Publication Partner</a
+        >
         <div class="pt-2">
           <a
+            data-abstract-submit
             href="https://docs.google.com/forms/d/e/1FAIpQLSd5KhGvsJviFYpABNBcRsvFkWbCcwbVPVXhRxq1UC4WAUlhug/viewform?usp=dialog"
             class="block w-full text-center px-5 py-3 rounded-xl text-base font-bold text-white bg-brand-gradient shadow-brand"
-            >Register Now</a
+            >Submit Abstract</a
           >
         </div>
       </div>
@@ -310,11 +515,12 @@
               class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
             >
               <a
+                data-abstract-submit
                 href="https://docs.google.com/forms/d/e/1FAIpQLSd5KhGvsJviFYpABNBcRsvFkWbCcwbVPVXhRxq1UC4WAUlhug/viewform?usp=dialog"
                 class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-brand-gradient shadow-brand shadow-brand-hover transition-all flex items-center justify-center space-x-3"
               >
                 <i class="fa-solid fa-paper-plane"></i>
-                <span>Register for Competition</span>
+                <span>Submit Abstract</span>
               </a>
               <a
                 href="https://heyzine.com/flip-book/9e877eef81.html"
@@ -361,6 +567,14 @@
               </div>
             </div>
 
+            <p
+              id="abstract-stage-message"
+              class="text-sm sm:text-base text-slate-600 leading-relaxed"
+              aria-live="polite"
+            >
+              Registration is closed. Registered teams can submit their
+              abstracts until September 16, 2026, at 23:59 WIB.
+            </p>
             <!-- Countdown Component -->
             <div class="pt-6">
               <div
@@ -371,7 +585,10 @@
                   class="flex items-center justify-center space-x-2 text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-4"
                 >
                   <i class="fa-regular fa-clock text-brand-cyan text-base"></i>
-                  <span>Team Registration Deadline: September 10, 2026</span>
+                  <span
+                    >Abstract Submission Deadline: September 16, 2026 · 23:59
+                    WIB</span
+                  >
                 </div>
 
                 <!-- Timer Display Cards -->
@@ -462,7 +679,8 @@
                   </div>
                   <span
                     class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700"
-                    >Registration Open</span
+                    data-abstract-status
+                    >Abstract Submission Open</span
                   >
                 </div>
 
@@ -509,7 +727,7 @@
                       >
                     </div>
                     <span class="text-xs text-brand-blue font-bold"
-                      >August 25, 2026</span
+                      >September 16, 2026 · 23:59 WIB</span
                     >
                   </div>
                 </div>
@@ -518,14 +736,15 @@
                   class="p-4 rounded-xl bg-brand-gradient text-white flex items-center justify-between shadow-brand"
                 >
                   <div class="space-y-0.5 text-left">
-                    <div class="text-xs text-white/80">Wave 1</div>
-                    <div class="text-sm font-bold">Early Bird Registration</div>
+                    <div class="text-xs text-white/80">Registered teams</div>
+                    <div class="text-sm font-bold">Abstract Submission</div>
                   </div>
                   <a
+                    data-abstract-submit
                     href="https://docs.google.com/forms/d/e/1FAIpQLSd5KhGvsJviFYpABNBcRsvFkWbCcwbVPVXhRxq1UC4WAUlhug/viewform?usp=dialog"
                     class="px-3 py-1.5 bg-white text-brand-blue text-xs font-bold rounded-lg hover:bg-brand-light transition-colors"
                   >
-                    Register
+                    Submit Abstract
                   </a>
                 </div>
               </div>
@@ -892,6 +1111,7 @@
                 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-brand-blue transition-colors relative z-10"
               >
                 Open Registration
+                <span class="text-sm text-slate-500">· Closed</span>
               </h3>
               <div
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
@@ -921,6 +1141,9 @@
                 class="font-bold text-lg text-slate-900 mb-3 group-hover:text-brand-blue transition-colors relative z-10"
               >
                 Abstract Submission Deadline
+                <span data-abstract-timeline class="text-sm text-brand-blue"
+                  >· Open</span
+                >
               </h3>
               <div
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
@@ -1568,17 +1791,239 @@
       </div>
     </section>
 
-
-<!-- Provisional people content: replace before publication. -->
-<!-- PEOPLE & PARTNERS: temporarily disabled
-<section id="committee" class="people-section py-20 bg-slate-50"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="mb-10"><p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">The organizing team</p><h2 class="people-heading">Organizing Committee</h2></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Visual Design &amp; Publications</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Firdhie"><strong aria-hidden="true">F</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Firdhie</h4><p class="person-role mt-2">Visual Design &amp; Publications</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Lutfie"><strong aria-hidden="true">L</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Lutfie</h4><p class="person-role mt-2">Visual Design &amp; Publications</p></article></div></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Finance</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Wilda"><strong aria-hidden="true">W</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Wilda</h4><p class="person-role mt-2">Finance</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Nindia"><strong aria-hidden="true">N</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Nindia</h4><p class="person-role mt-2">Finance</p></article></div></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Sponsorship &amp; Media Partnerships</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Putri"><strong aria-hidden="true">P</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Putri</h4><p class="person-role mt-2">Sponsorship &amp; Media Partnerships</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Cut Widia"><strong aria-hidden="true">CW</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Cut Widia</h4><p class="person-role mt-2">Sponsorship &amp; Media Partnerships</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Anton"><strong aria-hidden="true">A</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Anton</h4><p class="person-role mt-2">Sponsorship &amp; Media Partnerships</p></article></div></div><div class="mb-10"><h3 class="text-xl font-bold text-slate-800 mb-5">Website Development</h3><div class="people-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Billy Bintang Jatmiko"><strong aria-hidden="true">BBJ</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Billy Bintang Jatmiko</h4><p class="person-role mt-2">Website Development</p></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Rizal Fahmi"><strong aria-hidden="true">RF</strong><span>Official photo to be added</span></div><h4 style="font-size:20px;font-weight:800;color:#102b47">Rizal Fahmi</h4><p class="person-role mt-2">Website Development</p></article></div></div></div></section>
--->
-<!-- PEOPLE & PARTNERS: temporarily disabled
-<section id="judges" class="people-section py-20" style="background:#eaf5fc"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="text-center mb-10"><p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">Meet the jury</p><h2 class="people-heading">Panel of Judges</h2><p class="people-note">Provisional profiles — official photos and credentials will be added.</p></div><div class="judges-grid"><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Pak Arya"><strong aria-hidden="true">A</strong><span>Official photo to be added</span></div><div class="person-role">Jury member · provisional profile</div><h3>Pak Arya</h3><p class="text-slate-500 mt-2">Full name, title and institution to be confirmed.</p><p class="mt-4 text-slate-600"><strong>Expertise:</strong> To be confirmed.</p><details><summary>View provisional profile</summary><p>This profile is reserved for Pak Arya. The official biography and research expertise will be added after confirmation.</p></details></article><article class="person-card"><div class="person-photo" aria-label="Photo placeholder for Pak Catur"><strong aria-hidden="true">C</strong><span>Official photo to be added</span></div><div class="person-role">Jury member · provisional profile</div><h3>Pak Catur</h3><p class="text-slate-500 mt-2">Full name, title and institution to be confirmed.</p><p class="mt-4 text-slate-600"><strong>Expertise:</strong> To be confirmed.</p><details><summary>View provisional profile</summary><p>This profile is reserved for Pak Catur. The official biography and research expertise will be added after confirmation.</p></details></article></div></div></section>
--->
-<!-- PEOPLE & PARTNERS: temporarily disabled
-<section id="partners" class="people-section py-20 bg-white"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div class="partner-layout rounded-3xl border border-slate-200 p-6 sm:p-10"><div class="bg-white rounded-2xl p-8 flex justify-center"><img src="src/Assets/semarak-ilmu.jpeg" alt="Semarak Ilmu — Research & Publication" loading="lazy" style="width:260px;max-width:100%;height:auto;object-fit:contain"></div><div><p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">Publication collaboration</p><h2 class="people-heading">Semarak Ilmu</h2><p class="text-slate-600 mt-5 leading-relaxed">Semarak Ilmu is the paper publication partner for KI-RBSET. Details about the publication process and requirements will be announced by the organizing committee.</p><a href="https://semarakilmu.com.my/" target="_blank" rel="noopener noreferrer" class="inline-flex mt-6 px-6 py-3 rounded-xl bg-brand-blue text-white font-bold">Visit Semarak Ilmu <span class="sr-only">(opens in a new tab)</span></a></div></div></div></section>
--->
+    <!-- Provisional people content: replace before publication. -->
+    <section id="committee" class="people-section py-20 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">The organizing team</p>
+          <h2 class="people-heading">Organizing Committee</h2>
+        </div>
+        <div class="committee-directory">
+          <div class="committee-row">
+            <h3>Patrons</h3>
+            <ul>
+              <li>Prof. Dr. Ir. Muladi, S.T., M.T.</li>
+              <li>Pak Azwadi</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Committee Supervisor</h3>
+            <ul>
+              <li>Dr. Singgih Dwi Prasetyo, S.T., M.T.</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Chairperson</h3>
+            <ul>
+              <li>Moh Anton Rahmawijaya</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Publication Editors</h3>
+            <ul>
+              <li>Yuki Trisnoaji</li>
+              <li>Rama Pujangga</li>
+              <li>Rama Reynanda</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Finance</h3>
+            <ul>
+              <li>Nindia Nova Novenda</li>
+              <li>Nur Wilda</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Website Development</h3>
+            <ul>
+              <li>Billy Bintang Jatmiko</li>
+              <li>Rizal Fahmi Kurniawan</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Visual Design &amp; Publications</h3>
+            <ul>
+              <li>Muhammad Firdhie Andalas</li>
+              <li>Lutfi Ahmad Suriyana</li>
+            </ul>
+          </div>
+          <div class="committee-row">
+            <h3>Sponsorship &amp; Media Partnerships</h3>
+            <ul>
+              <li>Hardiyanti Putri Jauhari</li>
+              <li>Cut Widia Catur Rose</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="judges"
+      class="people-section py-20"
+      style="background: #eaf5fc"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <p
+            class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3"
+          >
+            Meet the jury
+          </p>
+          <h2 class="people-heading">Panel of Judges</h2>
+        </div>
+        <div class="judges-grid">
+          <article class="person-card">
+            <div class="person-photo judge-portrait">
+              <img src="src/Assets/judges/arya-kusumawardana.jpg" alt="Ir. Arya Kusumawardana, S.Pd., M.T." width="495" height="643" loading="lazy" />
+            </div>
+            <div class="person-role">Jury Member</div>
+            <h3>Ir. Arya Kusumawardana, S.Pd., M.T.</h3>
+            <p class="text-slate-500 mt-2"><strong>Scopus affiliation:</strong><br>Universitas Negeri Malang<br><span>Malang, Indonesia</span></p>
+            <p class="mt-4 text-slate-600">
+              <strong>Expertise:</strong> Control Systems · Industrial
+              Automation · Power Electronics · Robotics
+            </p>
+            <details>
+              <summary>
+                View Profile<span class="sr-only"
+                  >: Ir. Arya Kusumawardana, S.Pd., M.T.</span
+                >
+              </summary>
+              <p>
+                Arya Kusumawardana’s supplied CV describes his teaching at Universitas Negeri Malang
+                with an academic background in electrical engineering education
+                and control systems. His teaching covers control systems,
+                industrial automation, programmable logic controllers,
+                microprocessors, and power electronics. His research includes
+                mobile robot formation control, wind turbine control, and motor
+                efficiency, connecting electrical engineering principles with
+                practical automation and renewable energy applications.
+              </p>
+            <div class="judge-research" aria-label="Scopus research profile">
+ <dl class="judge-metrics"><div><dt>Citations</dt><dd>108</dd></div><div><dt>Documents</dt><dd>45</dd></div><div><dt>h-index</dt><dd>5</dd></div></dl>
+ <p>Cited by 93 documents.</p>
+ <p class="judge-source">Source: supplied Scopus profile snapshot. Figures may change.</p>
+ <p><a href="https://www.scopus.com/authid/detail.uri?authorId=57203093060" target="_blank" rel="noopener noreferrer">Scopus profile</a> · <a href="https://orcid.org/0000-0001-7919-7528" target="_blank" rel="noopener noreferrer">ORCID</a></p>
+ </div>
+</details>
+          </article>
+          <article class="person-card">
+            <div class="person-photo judge-portrait">
+              <img src="src/Assets/judges/muhammad-afnan-habibi.jpg" alt="Muhammad Afnan Habibi, S.T., M.T., M.Eng." width="363" height="480" loading="lazy" />
+            </div>
+            <div class="person-role">Jury Member</div>
+            <h3>Muhammad Afnan Habibi, S.T., M.T., M.Eng.</h3>
+            <p class="text-slate-500 mt-2"><strong>Scopus affiliation:</strong><br>University of Leeds<br><span>Leeds, United Kingdom</span></p>
+            <p class="mt-4 text-slate-600">
+              <strong>Expertise:</strong> Power Systems · Electrical Measurement
+              · SCADA · PLC
+            </p>
+            <details>
+              <summary>
+                View Profile<span class="sr-only"
+                  >: Muhammad Afnan Habibi, S.T., M.T., M.Eng.</span
+                >
+              </summary>
+              <p>
+                Muhammad Afnan Habibi’s supplied CV describes his teaching at Universitas Negeri Malang
+                with an academic background in electrical engineering and
+                engineering studies at the University of Miyazaki. His teaching
+                experience includes power transmission and distribution,
+                electrical measurement, electromagnetic fields, SCADA, and
+                programmable logic controllers. His academic work also explores
+                electrical system design and control applications, including
+                embedded systems for hydrogen generation.
+              </p>
+            <div class="judge-research" aria-label="Scopus research profile">
+ <dl class="judge-metrics"><div><dt>Citations</dt><dd>127</dd></div><div><dt>Documents</dt><dd>44</dd></div><div><dt>h-index</dt><dd>6</dd></div></dl>
+ <p>Cited by 106 documents.</p>
+ <p class="judge-source">Source: supplied Scopus profile snapshot. Figures may change.</p>
+ <p><a href="https://www.scopus.com/authid/detail.uri?authorId=57204542903" target="_blank" rel="noopener noreferrer">Scopus profile</a> · <a href="https://orcid.org/0000-0002-7484-480X" target="_blank" rel="noopener noreferrer">ORCID</a></p>
+ </div>
+</details>
+          </article>
+          <article class="person-card">
+            <div class="person-photo judge-portrait">
+              <img src="src/Assets/judges/catur-harsito.png" alt="Catur Harsito, S.T., M.T." width="451" height="518" loading="lazy" />
+            </div>
+            <div class="person-role">Jury Member</div>
+            <h3>Catur Harsito, S.T., M.T.
+              <br>
+            </h3>
+            <p class="text-slate-500 mt-2"><strong>Scopus affiliation:</strong><br>Kangwon National University<br><span>Chuncheon, South Korea</span></p>
+            <p class="mt-4 text-slate-600">
+              <strong>Expertise:</strong> Renewable Energy · Wind Turbines ·
+              Design Engineering · CFD
+            </p>
+            <details>
+              <summary>
+                View Profile<span class="sr-only"
+                  >: Catur Harsito, S.T., M.T.</span
+                >
+              </summary>
+              <p>
+                Catur Harsito’s supplied CV describes his teaching in Mechanical Engineering at the
+                Vocational School of Universitas Sebelas Maret. His expertise
+                includes renewable energy, wind turbines, design engineering,
+                computational fluid dynamics, and fluid machinery. His research
+                explores energy conversion and engineering design, including
+                hybrid photovoltaic-thermal systems and thermoelectric waste
+                heat recovery. He earned his bachelor’s and master’s degrees in
+                mechanical engineering from Universitas Sebelas Maret.
+              </p>
+            <div class="judge-research" aria-label="Scopus research profile">
+ <dl class="judge-metrics"><div><dt>Citations</dt><dd>448</dd></div><div><dt>Documents</dt><dd>63</dd></div><div><dt>h-index</dt><dd>12</dd></div></dl>
+ <p>Cited by 333 documents.</p>
+ <p class="judge-source">Source: supplied Scopus profile snapshot. Figures may change.</p>
+ <p><a href="https://www.scopus.com/authid/detail.uri?authorId=57201699049" target="_blank" rel="noopener noreferrer">Scopus profile</a> · <a href="https://orcid.org/0000-0003-4397-5089" target="_blank" rel="noopener noreferrer">ORCID</a></p>
+ </div>
+</details>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="partners" class="people-section py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="partner-layout rounded-3xl border border-slate-200 p-6 sm:p-10"
+        >
+          <div class="bg-white rounded-2xl p-8 flex justify-center">
+            <img
+              src="src/Assets/semarakilmu_logo.png"
+              alt="Semarak Ilmu — Research & Publication"
+              loading="lazy"
+              style="
+                width: 260px;
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+              "
+            />
+          </div>
+          <div>
+            <p
+              class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3"
+            >
+              Publication collaboration
+            </p>
+            <h2 class="people-heading">Semarak Ilmu</h2>
+            <p class="text-slate-600 mt-5 leading-relaxed">
+              Semarak Ilmu is the paper publication partner for KI-RBSET.
+              Details about the publication process and requirements will be
+              announced by the organizing committee.
+            </p>
+            <a
+              href="https://semarakilmu.com.my/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex mt-6 px-6 py-3 rounded-xl bg-brand-blue text-white font-bold"
+              >Visit Semarak Ilmu
+              <span class="sr-only">(opens in a new tab)</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="faq" class="py-20 bg-white border-b border-slate-100">
       <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center space-y-3 mb-12">
@@ -1608,7 +2053,8 @@
               id="faq-content-1"
               class="hidden p-5 text-xs sm:text-sm text-slate-600 bg-white border-t border-slate-100 leading-relaxed"
             >
-              All active students from the same or different higher education institution/university worldwide.
+              All active students from the same or different higher education
+              institution/university worldwide.
             </div>
           </div>
 
@@ -1660,209 +2106,246 @@
       </div>
     </section>
 
-<section
-  id="report"
-  class="py-20 bg-gradient-to-b from-white to-brand-lighter/40 border-b border-slate-100"
->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Header -->
-    <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
-      <div
-        class="inline-block px-4 py-1.5 rounded-full bg-brand-light border border-brand-cyan/30 text-brand-blue text-xs font-extrabold uppercase tracking-widest"
-      >
-        REPORT & STATISTICS
-      </div>
-
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
-        KI-RBSET 2026 Report & Statistics
-      </h2>
-
-      <p class="text-slate-600 text-sm sm:text-base">
-        Explore website visitor statistics, geographic distribution, and other
-        analytics related to KI-RBSET 2026.
-      </p>
-    </div>
-
-    <!-- Summary Cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-      <!-- Total Users -->
-      <div
-        class="bg-white border border-brand-cyan/20 rounded-3xl p-6 shadow-sm hover:shadow-brand transition-all duration-300"
-      >
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-slate-500 mb-2">
-              Total Website Users
-            </p>
-
-            <h3
-              id="stat-total-users"
-              class="text-4xl font-extrabold text-slate-900"
-            >
-              --
-            </h3>
-
-            <p class="text-xs text-slate-500 mt-2">
-              Visitors recorded by Google Analytics
-            </p>
-          </div>
-
-          <div
-            class="w-14 h-14 rounded-2xl bg-brand-light text-brand-blue flex items-center justify-center text-2xl"
-          >
-            <i class="fa-solid fa-users"></i>
-          </div>
-        </div>
-      </div>
-
-      <!-- Total Countries -->
-      <div
-        class="bg-white border border-brand-cyan/20 rounded-3xl p-6 shadow-sm hover:shadow-brand transition-all duration-300"
-      >
-        <div class="flex items-center justify-between">
-          <div>
-            <p class="text-sm font-semibold text-slate-500 mb-2">
-              Total Countries
-            </p>
-
-            <h3
-              id="stat-total-countries"
-              class="text-4xl font-extrabold text-slate-900"
-            >
-              --
-            </h3>
-
-            <p class="text-xs text-slate-500 mt-2">
-              Countries visiting the KI-RBSET website
-            </p>
-          </div>
-
-          <div
-            class="w-14 h-14 rounded-2xl bg-brand-light text-brand-cyan flex items-center justify-center text-2xl"
-          >
-            <i class="fa-solid fa-earth-asia"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Main Dashboard -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-      <!-- Map -->
-      <div
-        class="lg:col-span-2 bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
-      >
-        <div
-          class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5"
-        >
-          <div>
-            <h3 class="text-lg font-extrabold text-slate-900">
-              <i class="fa-solid fa-earth-americas text-brand-cyan mr-2"></i>
-              Visitor Distribution Map
-            </h3>
-
-            <p class="text-xs text-slate-500 mt-1">
-              Geographic distribution based on Google Analytics data
-            </p>
-          </div>
-
-          <span
-            class="px-3 py-1.5 rounded-full bg-brand-lighter text-brand-blue text-xs font-bold border border-brand-cyan/20"
-          >
-            Google Analytics
-          </span>
-        </div>
-
-        <div id="analytics-map" role="img" aria-label="World map of users by country; details in the country list" style="width:100%;height:clamp(240px,38vw,400px);overflow:hidden"></div>
-        <p id="analytics-map-status" role="status" class="text-sm text-slate-500 mt-3">Loading visitor map...</p>
-        <button id="analytics-map-retry" type="button" hidden class="mt-3 px-4 py-2 rounded-lg border text-sm font-bold">Retry map</button>
-      </div>
-
-      <!-- Countries -->
-      <div
-        class="bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
-      >
-        <div class="mb-6">
-          <h3 class="text-lg font-extrabold text-slate-900">
-            <i class="fa-solid fa-flag text-brand-cyan mr-2"></i>
-            Visitors by Country
-          </h3>
-
-          <p class="text-xs text-slate-500 mt-1">
-            Number of users from each country
-          </p>
-        </div>
-
-        <!-- Country List -->
-        <div id="country-stat-list" aria-live="polite" tabindex="0" aria-label="Users by country, scroll for more" class="space-y-6" style="max-height:320px;overflow-y:auto;padding-right:10px;overscroll-behavior:contain">
-          <!-- Loading -->
-          <div class="text-center py-10">
-            <i
-              class="fa-solid fa-spinner fa-spin text-2xl text-brand-cyan mb-3"
-            ></i>
-
-            <p class="text-sm text-slate-500">
-              Loading country statistics...
-            </p>
-          </div>
-        </div>
-
-        <!-- Country Summary -->
-        <div
-          class="mt-8 p-4 rounded-2xl bg-brand-lighter border border-brand-cyan/20"
-        >
-          <div class="flex items-center justify-between">
-            <div>
-              <p class="text-xs text-slate-500">Countries</p>
-
-              <p
-                id="country-summary-count"
-                class="text-xl font-extrabold text-brand-dark"
-              >
-                --
-              </p>
-            </div>
-
-            <div class="text-right">
-              <p class="text-xs text-slate-500">Total Users</p>
-
-              <p
-                id="country-summary-users"
-                class="text-xl font-extrabold text-brand-blue"
-              >
-                --
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Data Source Information -->
-    <div
-      class="mt-8 bg-white border border-brand-cyan/20 rounded-2xl p-5 shadow-sm"
+    <section
+      id="report"
+      class="py-20 bg-gradient-to-b from-white to-brand-lighter/40 border-b border-slate-100"
     >
-      <div class="flex items-start gap-4">
-        <div
-          class="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center shrink-0"
-        >
-          <i class="fa-solid fa-circle-info"></i>
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <div
+            class="inline-block px-4 py-1.5 rounded-full bg-brand-light border border-brand-cyan/30 text-brand-blue text-xs font-extrabold uppercase tracking-widest"
+          >
+            REPORT & STATISTICS
+          </div>
 
-        <div>
-          <h4 class="text-sm font-bold text-slate-800">
-            About This Data
-          </h4>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">
+            KI-RBSET 2026 Report & Statistics
+          </h2>
 
-          <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
-            Website traffic statistics are collected through Google Analytics.
-            The map, cards and country statistics use the same data, covering January 1, 2026 to today. Data may be cached for up to an hour. Country percentages show the share of country counts; a user may appear in more than one country.
+          <p class="text-slate-600 text-sm sm:text-base">
+            Explore website visitor statistics, geographic distribution, and
+            other analytics related to KI-RBSET 2026.
           </p>
         </div>
+
+        <!-- Summary Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <!-- Total Users -->
+          <div
+            class="bg-white border border-brand-cyan/20 rounded-3xl p-6 shadow-sm hover:shadow-brand transition-all duration-300"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-slate-500 mb-2">
+                  Total Website Users
+                </p>
+
+                <h3
+                  id="stat-total-users"
+                  class="text-4xl font-extrabold text-slate-900"
+                >
+                  --
+                </h3>
+
+                <p class="text-xs text-slate-500 mt-2">
+                  Visitors recorded by Google Analytics
+                </p>
+              </div>
+
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand-light text-brand-blue flex items-center justify-center text-2xl"
+              >
+                <i class="fa-solid fa-users"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Total Countries -->
+          <div
+            class="bg-white border border-brand-cyan/20 rounded-3xl p-6 shadow-sm hover:shadow-brand transition-all duration-300"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-semibold text-slate-500 mb-2">
+                  Total Countries
+                </p>
+
+                <h3
+                  id="stat-total-countries"
+                  class="text-4xl font-extrabold text-slate-900"
+                >
+                  --
+                </h3>
+
+                <p class="text-xs text-slate-500 mt-2">
+                  Countries visiting the KI-RBSET website
+                </p>
+              </div>
+
+              <div
+                class="w-14 h-14 rounded-2xl bg-brand-light text-brand-cyan flex items-center justify-center text-2xl"
+              >
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Dashboard -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <!-- Map -->
+          <div
+            class="lg:col-span-2 bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5"
+            >
+              <div>
+                <h3 class="text-lg font-extrabold text-slate-900">
+                  <i
+                    class="fa-solid fa-earth-americas text-brand-cyan mr-2"
+                  ></i>
+                  Visitor Distribution Map
+                </h3>
+
+                <p class="text-xs text-slate-500 mt-1">
+                  Geographic distribution based on Google Analytics data
+                </p>
+              </div>
+
+              <span
+                class="px-3 py-1.5 rounded-full bg-brand-lighter text-brand-blue text-xs font-bold border border-brand-cyan/20"
+              >
+                Google Analytics
+              </span>
+            </div>
+
+            <div
+              id="analytics-map"
+              role="img"
+              aria-label="World map of users by country; details in the country list"
+              style="
+                width: 100%;
+                height: clamp(240px, 38vw, 400px);
+                overflow: hidden;
+              "
+            ></div>
+            <p
+              id="analytics-map-status"
+              role="status"
+              class="text-sm text-slate-500 mt-3"
+            >
+              Loading visitor map...
+            </p>
+            <button
+              id="analytics-map-retry"
+              type="button"
+              hidden
+              class="mt-3 px-4 py-2 rounded-lg border text-sm font-bold"
+            >
+              Retry map
+            </button>
+          </div>
+
+          <!-- Countries -->
+          <div
+            class="bg-white border border-brand-cyan/20 rounded-3xl p-5 sm:p-6 shadow-sm"
+          >
+            <div class="mb-6">
+              <h3 class="text-lg font-extrabold text-slate-900">
+                <i class="fa-solid fa-flag text-brand-cyan mr-2"></i>
+                Visitors by Country
+              </h3>
+
+              <p class="text-xs text-slate-500 mt-1">
+                Number of users from each country
+              </p>
+            </div>
+
+            <!-- Country List -->
+            <div
+              id="country-stat-list"
+              aria-live="polite"
+              tabindex="0"
+              aria-label="Users by country, scroll for more"
+              class="space-y-6"
+              style="
+                max-height: 320px;
+                overflow-y: auto;
+                padding-right: 10px;
+                overscroll-behavior: contain;
+              "
+            >
+              <!-- Loading -->
+              <div class="text-center py-10">
+                <i
+                  class="fa-solid fa-spinner fa-spin text-2xl text-brand-cyan mb-3"
+                ></i>
+
+                <p class="text-sm text-slate-500">
+                  Loading country statistics...
+                </p>
+              </div>
+            </div>
+
+            <!-- Country Summary -->
+            <div
+              class="mt-8 p-4 rounded-2xl bg-brand-lighter border border-brand-cyan/20"
+            >
+              <div class="flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-slate-500">Countries</p>
+
+                  <p
+                    id="country-summary-count"
+                    class="text-xl font-extrabold text-brand-dark"
+                  >
+                    --
+                  </p>
+                </div>
+
+                <div class="text-right">
+                  <p class="text-xs text-slate-500">Total Users</p>
+
+                  <p
+                    id="country-summary-users"
+                    class="text-xl font-extrabold text-brand-blue"
+                  >
+                    --
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Source Information -->
+        <div
+          class="mt-8 bg-white border border-brand-cyan/20 rounded-2xl p-5 shadow-sm"
+        >
+          <div class="flex items-start gap-4">
+            <div
+              class="w-10 h-10 rounded-xl bg-brand-light text-brand-blue flex items-center justify-center shrink-0"
+            >
+              <i class="fa-solid fa-circle-info"></i>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-bold text-slate-800">About This Data</h4>
+
+              <p class="text-xs sm:text-sm text-slate-500 mt-1 leading-relaxed">
+                Website traffic statistics are collected through Google
+                Analytics. The map, cards and country statistics use the same
+                data, covering January 1, 2026 to today. Data may be cached for
+                up to an hour. Country percentages show the share of country
+                counts; a user may appear in more than one country.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <footer class="py-12 bg-slate-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
@@ -2015,7 +2498,10 @@
           </p>
         </div>
         <div class="space-y-3">
-          <a href="https://heyzine.com/flip-book/9e877eef81.html" target="_blank" rel="noopener noreferrer"
+          <a
+            href="https://heyzine.com/flip-book/9e877eef81.html"
+            target="_blank"
+            rel="noopener noreferrer"
             class="w-full py-3 rounded-xl bg-brand-gradient text-white font-bold text-sm shadow-brand hover:opacity-95 transition-all flex items-center justify-center space-x-2"
           >
             <i class="fa-solid fa-download"></i>
@@ -2270,14 +2756,47 @@
       }
 
       function downloadBook() {
-        window.open("https://heyzine.com/flip-book/9e877eef81.html", "_blank", "noopener,noreferrer");
+        window.open(
+          "https://heyzine.com/flip-book/9e877eef81.html",
+          "_blank",
+          "noopener,noreferrer",
+        );
         closePanduanModal();
       }
 
       function updateCountdown() {
-        const targetDate = new Date("September 10, 2026 12:00:00").getTime();
+        const targetDate = new Date("2026-09-16T23:59:00+07:00").getTime();
         const now = new Date().getTime();
         const difference = targetDate - now;
+        const closed = difference <= 0;
+        document.querySelectorAll("[data-abstract-status]").forEach((node) => {
+          node.textContent = closed
+            ? "Abstract Submission Closed"
+            : "Abstract Submission Open";
+          node.classList.toggle("opacity-60", closed);
+        });
+        document
+          .querySelectorAll("[data-abstract-timeline]")
+          .forEach((node) => {
+            node.textContent = closed ? "· Closed" : "· Open";
+          });
+        document.getElementById("abstract-stage-message").textContent = closed
+          ? "Registration and abstract submission are closed. Please follow the official announcements for the next stage."
+          : "Registration is closed. Registered teams can submit their abstracts until September 16, 2026, at 23:59 WIB.";
+        document.querySelectorAll("[data-abstract-submit]").forEach((link) => {
+          if (!link.dataset.submissionUrl)
+            link.dataset.submissionUrl = link.getAttribute("href");
+          if (closed) {
+            link.removeAttribute("href");
+            link.setAttribute("aria-disabled", "true");
+            link.setAttribute("tabindex", "-1");
+          } else {
+            link.setAttribute("href", link.dataset.submissionUrl);
+            link.removeAttribute("aria-disabled");
+            link.removeAttribute("tabindex");
+          }
+          link.classList.toggle("abstract-disabled", closed);
+        });
 
         if (difference > 0) {
           const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -2314,151 +2833,199 @@
       updateCountdown();
     </script>
     <script>
-  function countryCodeToFlag(code) {
-    if (!/^[a-z]{2}$/i.test(code)) {
-      return "🌍";
-    }
+      function countryCodeToFlag(code) {
+        if (!/^[a-z]{2}$/i.test(code)) {
+          return "🌍";
+        }
 
-    return code
-      .toUpperCase()
-      .replace(/./g, (char) =>
-        String.fromCodePoint(127397 + char.charCodeAt())
-      );
-  }
+        return code
+          .toUpperCase()
+          .replace(/./g, (char) =>
+            String.fromCodePoint(127397 + char.charCodeAt()),
+          );
+      }
 
-  function formatNumber(value) {
-    return new Intl.NumberFormat("en-US").format(value);
-  }
+      function formatNumber(value) {
+        return new Intl.NumberFormat("en-US").format(value);
+      }
 
-  function escapeAnalyticsText(value) {
-    const node = document.createElement("span");
-    node.textContent = value;
-    return node.innerHTML;
-  }
+      function escapeAnalyticsText(value) {
+        const node = document.createElement("span");
+        node.textContent = value;
+        return node.innerHTML;
+      }
 
-  let analyticsMapRows = [];
-  let analyticsMapLoader;
-  let analyticsMapGeneration = 0;
-  function loadMapLibrary() {
-    if (window.google?.visualization?.GeoChart) return Promise.resolve();
-    if (analyticsMapLoader) return analyticsMapLoader;
-    analyticsMapLoader = new Promise((resolve, reject) => {
-      const timer = setTimeout(() => reject(new Error("Map timeout")), 15000);
-      const failed = () => { clearTimeout(timer); reject(new Error("Map unavailable")); };
-      const load = () => {
+      let analyticsMapRows = [];
+      let analyticsMapLoader;
+      let analyticsMapGeneration = 0;
+      function loadMapLibrary() {
+        if (window.google?.visualization?.GeoChart) return Promise.resolve();
+        if (analyticsMapLoader) return analyticsMapLoader;
+        analyticsMapLoader = new Promise((resolve, reject) => {
+          const timer = setTimeout(
+            () => reject(new Error("Map timeout")),
+            15000,
+          );
+          const failed = () => {
+            clearTimeout(timer);
+            reject(new Error("Map unavailable"));
+          };
+          const load = () => {
+            try {
+              google.charts.load("current", { packages: ["geochart"] });
+              google.charts.setOnLoadCallback(() => {
+                clearTimeout(timer);
+                resolve();
+              });
+            } catch {
+              failed();
+            }
+          };
+          if (window.google?.charts) return load();
+          const script = document.createElement("script");
+          script.src = "https://www.gstatic.com/charts/loader.js";
+          script.onload = load;
+          script.onerror = failed;
+          document.head.appendChild(script);
+        }).catch((error) => {
+          analyticsMapLoader = null;
+          throw error;
+        });
+        return analyticsMapLoader;
+      }
+      async function drawAnalyticsMap() {
+        const generation = ++analyticsMapGeneration;
+        const container = document.getElementById("analytics-map");
+        const status = document.getElementById("analytics-map-status");
+        const retry = document.getElementById("analytics-map-retry");
+        retry.hidden = true;
+        container.replaceChildren();
+        if (!analyticsMapRows.length) {
+          status.textContent = "No country locations to display yet.";
+          return;
+        }
+        status.textContent = "Loading visitor map...";
+        const failed = () => {
+          if (generation !== analyticsMapGeneration) return;
+          container.replaceChildren();
+          status.textContent =
+            "Map unavailable. You can still read all country statistics in the list.";
+          retry.hidden = false;
+        };
         try {
-          google.charts.load('current', {packages: ['geochart']});
-          google.charts.setOnLoadCallback(() => { clearTimeout(timer); resolve(); });
-        } catch { failed(); }
-      };
-      if (window.google?.charts) return load();
-      const script = document.createElement('script');
-      script.src = 'https://www.gstatic.com/charts/loader.js';
-      script.onload = load;
-      script.onerror = failed;
-      document.head.appendChild(script);
-    }).catch(error => { analyticsMapLoader = null; throw error; });
-    return analyticsMapLoader;
-  }
-  async function drawAnalyticsMap() {
-    const generation = ++analyticsMapGeneration;
-    const container = document.getElementById('analytics-map');
-    const status = document.getElementById('analytics-map-status');
-    const retry = document.getElementById('analytics-map-retry');
-    retry.hidden = true;
-    container.replaceChildren();
-    if (!analyticsMapRows.length) {
-      status.textContent = 'No country locations to display yet.';
-      return;
-    }
-    status.textContent = 'Loading visitor map...';
-    const failed = () => {
-      if (generation !== analyticsMapGeneration) return;
-      container.replaceChildren();
-      status.textContent = 'Map unavailable. You can still read all country statistics in the list.';
-      retry.hidden = false;
-    };
-    try {
-      await loadMapLibrary();
-      if (generation !== analyticsMapGeneration) return;
-      const table = google.visualization.arrayToDataTable([['Country', 'Users'], ...analyticsMapRows]);
-      const chart = new google.visualization.GeoChart(container);
-      google.visualization.events.addListener(chart, 'error', failed);
-      google.visualization.events.addListener(chart, 'ready', () => {
-        if (generation === analyticsMapGeneration) status.textContent = 'Point to a country to see its users. Gray indicates no country data.';
+          await loadMapLibrary();
+          if (generation !== analyticsMapGeneration) return;
+          const table = google.visualization.arrayToDataTable([
+            ["Country", "Users"],
+            ...analyticsMapRows,
+          ]);
+          const chart = new google.visualization.GeoChart(container);
+          google.visualization.events.addListener(chart, "error", failed);
+          google.visualization.events.addListener(chart, "ready", () => {
+            if (generation === analyticsMapGeneration)
+              status.textContent =
+                "Point to a country to see its users. Gray indicates no country data.";
+          });
+          chart.draw(table, {
+            displayMode: "regions",
+            resolution: "countries",
+            backgroundColor: "#ffffff",
+            datalessRegionColor: "#e2e8f0",
+            colorAxis: { colors: ["#a5e5ee", "#0284c7"] },
+            width: container.clientWidth,
+            height: container.clientHeight,
+            keepAspectRatio: true,
+          });
+        } catch {
+          failed();
+        }
+      }
+      document
+        .getElementById("analytics-map-retry")
+        .addEventListener("click", drawAnalyticsMap);
+      let mapResizeTimer;
+      window.addEventListener("resize", () => {
+        clearTimeout(mapResizeTimer);
+        mapResizeTimer = setTimeout(() => {
+          if (analyticsMapRows.length) drawAnalyticsMap();
+        }, 200);
       });
-      chart.draw(table, {displayMode:'regions', resolution:'countries', backgroundColor:'#ffffff',
-        datalessRegionColor:'#e2e8f0', colorAxis:{colors:['#a5e5ee','#0284c7']},
-        width:container.clientWidth, height:container.clientHeight, keepAspectRatio:true});
-    } catch { failed(); }
-  }
-  document.getElementById('analytics-map-retry').addEventListener('click', drawAnalyticsMap);
-  let mapResizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(mapResizeTimer);
-    mapResizeTimer = setTimeout(() => { if (analyticsMapRows.length) drawAnalyticsMap(); }, 200);
-  });
 
-  async function loadAnalyticsStatistics() {
-    const totalUsersElement =
-      document.getElementById("stat-total-users");
+      async function loadAnalyticsStatistics() {
+        const totalUsersElement = document.getElementById("stat-total-users");
 
-    const totalCountriesElement =
-      document.getElementById("stat-total-countries");
+        const totalCountriesElement = document.getElementById(
+          "stat-total-countries",
+        );
 
-    const countrySummaryCount =
-      document.getElementById("country-summary-count");
+        const countrySummaryCount = document.getElementById(
+          "country-summary-count",
+        );
 
-    const countrySummaryUsers =
-      document.getElementById("country-summary-users");
+        const countrySummaryUsers = document.getElementById(
+          "country-summary-users",
+        );
 
-    const countryList =
-      document.getElementById("country-stat-list");
+        const countryList = document.getElementById("country-stat-list");
 
-    analyticsMapRows = [];
-    ++analyticsMapGeneration;
-    document.getElementById('analytics-map').replaceChildren();
-    document.getElementById('analytics-map-status').textContent = 'Loading visitor map...';
-    document.getElementById('analytics-map-retry').hidden = true;
-    countryList.innerHTML = '<p class="text-sm text-slate-500" role="status">Loading country statistics...</p>';
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 15000);
-    try {
-      const response = await fetch("/api/analytics", { signal: controller.signal });
+        analyticsMapRows = [];
+        ++analyticsMapGeneration;
+        document.getElementById("analytics-map").replaceChildren();
+        document.getElementById("analytics-map-status").textContent =
+          "Loading visitor map...";
+        document.getElementById("analytics-map-retry").hidden = true;
+        countryList.innerHTML =
+          '<p class="text-sm text-slate-500" role="status">Loading country statistics...</p>';
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 15000);
+        try {
+          const response = await fetch("/api/analytics", {
+            signal: controller.signal,
+          });
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch analytics");
-      }
+          if (!response.ok) {
+            throw new Error("Failed to fetch analytics");
+          }
 
-      const data = await response.json();
-      const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
-      if (!isCount(data.totalUsers) || !isCount(data.totalCountries) ||
-          !Array.isArray(data.countries) || data.countries.some((country) =>
-            typeof country.name !== "string" || typeof country.code !== "string" ||
-            !isCount(country.users) || !Number.isFinite(country.percentage) ||
-            country.percentage < 0 || country.percentage > 100)) {
-        throw new Error("Invalid analytics response");
-      }
+          const data = await response.json();
+          const isCount = (value) => Number.isSafeInteger(value) && value >= 0;
+          if (
+            !isCount(data.totalUsers) ||
+            !isCount(data.totalCountries) ||
+            !Array.isArray(data.countries) ||
+            data.countries.some(
+              (country) =>
+                typeof country.name !== "string" ||
+                typeof country.code !== "string" ||
+                !isCount(country.users) ||
+                !Number.isFinite(country.percentage) ||
+                country.percentage < 0 ||
+                country.percentage > 100,
+            )
+          ) {
+            throw new Error("Invalid analytics response");
+          }
 
-      totalUsersElement.textContent =
-        formatNumber(data.totalUsers);
+          totalUsersElement.textContent = formatNumber(data.totalUsers);
 
-      totalCountriesElement.textContent =
-        formatNumber(data.totalCountries);
+          totalCountriesElement.textContent = formatNumber(data.totalCountries);
 
-      countrySummaryCount.textContent =
-        formatNumber(data.totalCountries);
+          countrySummaryCount.textContent = formatNumber(data.totalCountries);
 
-      countrySummaryUsers.textContent =
-        formatNumber(data.totalUsers);
+          countrySummaryUsers.textContent = formatNumber(data.totalUsers);
 
-      analyticsMapRows = data.countries
-        .filter(country => /^[A-Z]{2}$/.test(country.code) && country.users > 0)
-        .map(country => [{v:country.code, f:country.name}, country.users]);
-      drawAnalyticsMap();
+          analyticsMapRows = data.countries
+            .filter(
+              (country) => /^[A-Z]{2}$/.test(country.code) && country.users > 0,
+            )
+            .map((country) => [
+              { v: country.code, f: country.name },
+              country.users,
+            ]);
+          drawAnalyticsMap();
 
-      if (!data.countries || data.countries.length === 0) {
-        countryList.innerHTML = `
+          if (!data.countries || data.countries.length === 0) {
+            countryList.innerHTML = `
           <div class="text-center py-10">
             <i class="fa-solid fa-earth-asia text-3xl text-slate-300 mb-3"></i>
 
@@ -2468,14 +3035,14 @@
           </div>
         `;
 
-        return;
-      }
+            return;
+          }
 
-      countryList.innerHTML = data.countries
-        .map((country) => {
-          const flag = countryCodeToFlag(country.code);
+          countryList.innerHTML = data.countries
+            .map((country) => {
+              const flag = countryCodeToFlag(country.code);
 
-          return `
+              return `
             <div>
               <div class="flex items-center justify-between gap-3 mb-2">
                 <div class="flex items-center gap-3 min-w-0">
@@ -2517,26 +3084,24 @@
                 <div
                   class="h-full rounded-full bg-brand-cyan
                   transition-all duration-700"
-                  style="width: ${Math.min(
-                    country.percentage,
-                    100
-                  )}%"
+                  style="width: ${Math.min(country.percentage, 100)}%"
                 ></div>
               </div>
             </div>
           `;
-        })
-        .join("");
-    } catch (error) {
-      console.error(error);
-      document.getElementById('analytics-map-status').textContent = 'Visitor data could not be loaded. Use Try again in the country list.';
+            })
+            .join("");
+        } catch (error) {
+          console.error(error);
+          document.getElementById("analytics-map-status").textContent =
+            "Visitor data could not be loaded. Use Try again in the country list.";
 
-      totalUsersElement.textContent = "--";
-      totalCountriesElement.textContent = "--";
-      countrySummaryCount.textContent = "--";
-      countrySummaryUsers.textContent = "--";
+          totalUsersElement.textContent = "--";
+          totalCountriesElement.textContent = "--";
+          countrySummaryCount.textContent = "--";
+          countrySummaryUsers.textContent = "--";
 
-      countryList.innerHTML = `
+          countryList.innerHTML = `
         <div
           class="p-4 rounded-2xl bg-red-50 border border-red-100
           text-center"
@@ -2556,16 +3121,15 @@
           <button type="button" id="analytics-retry" class="mt-3 px-4 py-2 rounded-lg bg-white border border-red-200 text-sm font-bold text-red-600">Try again</button>
         </div>
       `;
-      document.getElementById("analytics-retry").addEventListener("click", loadAnalyticsStatistics);
-    } finally {
-      clearTimeout(timeout);
-    }
-  }
+          document
+            .getElementById("analytics-retry")
+            .addEventListener("click", loadAnalyticsStatistics);
+        } finally {
+          clearTimeout(timeout);
+        }
+      }
 
-  document.addEventListener(
-    "DOMContentLoaded",
-    loadAnalyticsStatistics
-  );
-</script>
+      document.addEventListener("DOMContentLoaded", loadAnalyticsStatistics);
+    </script>
   </body>
 </html>
