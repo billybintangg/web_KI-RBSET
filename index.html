@@ -301,7 +301,12 @@
 .committee-row li{font-size:16px;line-height:1.65;color:#1e293b;overflow-wrap:anywhere}
 @media(max-width:639px){.committee-directory{padding:4px 20px}.committee-row{grid-template-columns:1fr;gap:10px;padding:20px 0}}
 </style>
-</head>
+<style>
+.payment-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:40px;align-items:center}
+.payment-disabled{opacity:.55;pointer-events:none;cursor:not-allowed}
+#payment [hidden]{display:none!important}
+@media(max-width:767px){.payment-layout{grid-template-columns:1fr;gap:28px}}
+</style></head>
   <body
     class="font-sans text-lg bg-slate-50 text-slate-800 antialiased selection:bg-brand-cyan selection:text-white"
   >
@@ -385,11 +390,11 @@
           <!-- Header CTA Button -->
           <div class="hidden xl:flex items-center space-x-4">
             <a
-              data-abstract-submit
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeOr-09Xea6gelotM4WSB-x0eq_lfvK86x2qdZOys5L7MKdnw/viewform"
+              data-payment-info
+              href="#payment"
               class="px-5 py-2.5 rounded-full text-sm font-bold text-white bg-brand-gradient hover:opacity-95 shadow-brand shadow-brand-hover transition-all flex items-center space-x-2"
             >
-              <span>Submit Abstract</span>
+              <span>Payment Information</span>
               <i class="fa-solid fa-arrow-right text-xs"></i>
             </a>
           </div>
@@ -465,10 +470,10 @@
         >
         <div class="pt-2">
           <a
-            data-abstract-submit
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeOr-09Xea6gelotM4WSB-x0eq_lfvK86x2qdZOys5L7MKdnw/viewform"
+            data-payment-info
+            href="#payment"
             class="block w-full text-center px-5 py-3 rounded-xl text-base font-bold text-white bg-brand-gradient shadow-brand"
-            >Submit Abstract</a
+            >Payment Information</a
           >
         </div>
       </div>
@@ -515,12 +520,12 @@
               class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
             >
               <a
-                data-abstract-submit
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeOr-09Xea6gelotM4WSB-x0eq_lfvK86x2qdZOys5L7MKdnw/viewform"
+                data-payment-info
+                href="#payment"
                 class="w-full sm:w-auto px-8 py-4 rounded-xl text-base font-bold text-white bg-brand-gradient shadow-brand shadow-brand-hover transition-all flex items-center justify-center space-x-3"
               >
                 <i class="fa-solid fa-paper-plane"></i>
-                <span>Submit Abstract</span>
+                <span>Payment Information</span>
               </a>
               <a
                 href="https://heyzine.com/flip-book/9e877eef81.html"
@@ -568,13 +573,10 @@
             </div>
 
             <p
-              id="abstract-stage-message"
+              id="payment-stage-message"
               class="text-sm sm:text-base text-slate-600 leading-relaxed"
               aria-live="polite"
-            >
-              Registration is closed. Registered teams can submit their
-              abstracts until September 16, 2026, at 23:59 WIB.
-            </p>
+            >Registration and abstract submission are closed. For teams with accepted abstracts only: complete payment by September 18, 2026, at 23:59 WIB.</p>
             <!-- Countdown Component -->
             <div class="pt-6">
               <div
@@ -586,7 +588,7 @@
                 >
                   <i class="fa-regular fa-clock text-brand-cyan text-base"></i>
                   <span
-                    >Abstract Submission Deadline: September 16, 2026 · 23:59
+                    >Payment Deadline: September 18, 2026 · 23:59
                     WIB</span
                   >
                 </div>
@@ -679,8 +681,8 @@
                   </div>
                   <span
                     class="px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-700"
-                    data-abstract-status
-                    >Abstract Submission Open</span
+                    data-payment-status
+                    >Payment Open</span
                   >
                 </div>
 
@@ -723,11 +725,11 @@
                       <i class="fa-solid fa-calendar-check text-brand-cyan"></i>
                       <span
                         class="text-xs sm:text-sm font-semibold text-slate-700"
-                        >Submission Deadline</span
+                        >Payment Deadline</span
                       >
                     </div>
                     <span class="text-xs text-brand-blue font-bold"
-                      >September 16, 2026 · 23:59 WIB</span
+                      >September 18, 2026 · 23:59 WIB</span
                     >
                   </div>
                 </div>
@@ -736,15 +738,15 @@
                   class="p-4 rounded-xl bg-brand-gradient text-white flex items-center justify-between shadow-brand"
                 >
                   <div class="space-y-0.5 text-left">
-                    <div class="text-xs text-white/80">Registered teams</div>
-                    <div class="text-sm font-bold">Abstract Submission</div>
+                    <div class="text-xs text-white/80">Accepted teams</div>
+                    <div class="text-sm font-bold">Re-registration &amp; Payment</div>
                   </div>
                   <a
-                    data-abstract-submit
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSeOr-09Xea6gelotM4WSB-x0eq_lfvK86x2qdZOys5L7MKdnw/viewform"
+                    data-payment-info
+                    href="#payment"
                     class="px-3 py-1.5 bg-white text-brand-blue text-xs font-bold rounded-lg hover:bg-brand-light transition-colors"
                   >
-                    Submit Abstract
+                    Payment Information
                   </a>
                 </div>
               </div>
@@ -754,6 +756,27 @@
       </div>
     </section>
 
+<section id="payment" class="py-20 bg-slate-50" style="scroll-margin-top:100px">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="payment-layout bg-white border border-brand-cyan/20 rounded-3xl p-6 sm:p-10">
+   <div>
+    <p class="text-sm font-bold tracking-widest uppercase text-brand-blue mb-3">Next step for accepted teams</p>
+    <h2 class="people-heading">Re-registration &amp; Payment</h2>
+    <p class="mt-4 text-slate-700 font-semibold">For teams with accepted abstracts only.</p>
+    <p class="mt-6 text-3xl font-extrabold text-brand-dark">IDR 210,000 <span class="text-base font-medium text-slate-500">per team</span></p>
+    <p class="mt-4 text-slate-600">Payment deadline: <strong>September 18, 2026, at 23:59 WIB</strong></p>
+    <p data-payment-status role="status" class="mt-4 font-bold text-brand-blue">Checking payment availability…</p>
+    <p class="mt-4 text-slate-600">Scan the QR code or select Open Payment Page to access the payment page from this device.</p>
+    <a id="payment-link" aria-disabled="true" tabindex="-1" class="payment-disabled inline-flex mt-6 px-6 py-3 rounded-xl bg-brand-blue text-white font-bold" target="_blank" rel="noopener noreferrer">Open Payment Page</a>
+    <noscript><p class="mt-4">Enable JavaScript to check payment availability.</p></noscript>
+   </div>
+   <div id="payment-qr" hidden>
+    <img src="src/Assets/payment-qr.png" alt="QR code linking to the payment page" width="1000" height="1000" style="display:block;width:100%;max-width:320px;height:auto;margin:auto" />
+    <p class="mt-4 text-center text-sm text-slate-500">Scan to open the payment page</p>
+   </div>
+  </div>
+ </div>
+</section>
     <section id="about" class="py-20 bg-white border-y border-slate-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto space-y-6 mb-16">
@@ -1142,14 +1165,7 @@
               >
                 Abstract Submission Deadline
                 <span data-abstract-timeline class="text-sm text-brand-blue"
-                  >· Open</span
-                >
-              </h3>
-              <div
-                class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
-              >
-                <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>September 8–16, 2026</span>
+                  >· Closed</span>
               </div>
             </div>
           </div>
@@ -1207,8 +1223,9 @@
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>September 16–18, 2026</span>
+                <span>September 16–18, 2026 · 23:59 WIB</span>
               </div>
+<p class="mt-4 relative z-10"><a href="#payment" class="text-brand-blue font-bold underline">Payment Information</a> <span data-payment-timeline class="text-sm"></span></p>
             </div>
           </div>
 
@@ -1236,7 +1253,7 @@
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>September 8–20, 2026</span>
+                <span>September 18–20, 2026</span>
               </div>
             </div>
           </div>
@@ -1909,7 +1926,7 @@
           </article>
           <article class="person-card">
             <div class="person-photo judge-portrait">
-              <img src="src/Assets/judges/muhammad-afnan-habibi.jpg" alt="Muhammad Afnan Habibi, S.T., M.T., M.Eng." width="363" height="480" loading="lazy" />
+              <img src="src/Assets/judges/muhammad-afnan-habibi.png" alt="Muhammad Afnan Habibi, S.T., M.T., M.Eng." width="363" height="480" loading="lazy" />
             </div>
             <div class="person-role">Jury Member</div>
             <h3>Muhammad Afnan Habibi, S.T., M.T., M.Eng.</h3>
@@ -2765,68 +2782,39 @@
       }
 
       function updateCountdown() {
-        const targetDate = new Date("2026-09-16T23:59:00+07:00").getTime();
-        const now = new Date().getTime();
-        const difference = targetDate - now;
+        const targetDate = new Date("2026-09-18T23:59:00+07:00").getTime();
+        const difference = targetDate - Date.now();
         const closed = difference <= 0;
-        document.querySelectorAll("[data-abstract-status]").forEach((node) => {
-          node.textContent = closed
-            ? "Abstract Submission Closed"
-            : "Abstract Submission Open";
-          node.classList.toggle("opacity-60", closed);
+        document.querySelectorAll('[data-payment-status]').forEach(node => {
+          const label = closed ? 'Payment Closed' : 'Payment Open';
+          if (node.textContent !== label) node.textContent = label;
         });
-        document
-          .querySelectorAll("[data-abstract-timeline]")
-          .forEach((node) => {
-            node.textContent = closed ? "· Closed" : "· Open";
-          });
-        document.getElementById("abstract-stage-message").textContent = closed
-          ? "Registration and abstract submission are closed. Please follow the official announcements for the next stage."
-          : "Registration is closed. Registered teams can submit their abstracts until September 16, 2026, at 23:59 WIB.";
-        document.querySelectorAll("[data-abstract-submit]").forEach((link) => {
-          if (!link.dataset.submissionUrl)
-            link.dataset.submissionUrl = link.getAttribute("href");
-          if (closed) {
-            link.removeAttribute("href");
-            link.setAttribute("aria-disabled", "true");
-            link.setAttribute("tabindex", "-1");
-          } else {
-            link.setAttribute("href", link.dataset.submissionUrl);
-            link.removeAttribute("aria-disabled");
-            link.removeAttribute("tabindex");
-          }
-          link.classList.toggle("abstract-disabled", closed);
+        document.querySelectorAll('[data-payment-timeline]').forEach(node => {
+          node.textContent = closed ? '· Closed' : '· Open';
         });
-
-        if (difference > 0) {
-          const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-          const hours = Math.floor(
-            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-          );
-          const minutes = Math.floor(
-            (difference % (1000 * 60 * 60)) / (1000 * 60),
-          );
-          const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-          document.getElementById("cd-days").innerText = String(days).padStart(
-            2,
-            "0",
-          );
-          document.getElementById("cd-hours").innerText = String(
-            hours,
-          ).padStart(2, "0");
-          document.getElementById("cd-minutes").innerText = String(
-            minutes,
-          ).padStart(2, "0");
-          document.getElementById("cd-seconds").innerText = String(
-            seconds,
-          ).padStart(2, "0");
+        document.querySelectorAll('[data-abstract-timeline]').forEach(node => { node.textContent = '· Closed'; });
+        const message = closed
+          ? 'Registration, abstract submission, and payment are closed. Please follow the official announcements for the next stage.'
+          : 'Registration and abstract submission are closed. For teams with accepted abstracts only: complete payment by September 18, 2026, at 23:59 WIB.';
+        const stage = document.getElementById('payment-stage-message');
+        if (stage.textContent !== message) stage.textContent = message;
+        document.getElementById('payment-qr').hidden = closed;
+        const link = document.getElementById('payment-link');
+        if (closed) {
+          link.removeAttribute('href');
+          link.setAttribute('aria-disabled', 'true');
+          link.setAttribute('tabindex', '-1');
         } else {
-          document.getElementById("cd-days").innerText = "00";
-          document.getElementById("cd-hours").innerText = "00";
-          document.getElementById("cd-minutes").innerText = "00";
-          document.getElementById("cd-seconds").innerText = "00";
+          link.setAttribute('href', 'https://q.me-qr.com/njiareat');
+          link.removeAttribute('aria-disabled');
+          link.removeAttribute('tabindex');
         }
+        link.classList.toggle('payment-disabled', closed);
+        const seconds = Math.max(0, Math.floor(difference / 1000));
+        const values = [Math.floor(seconds/86400), Math.floor(seconds/3600)%24, Math.floor(seconds/60)%60, seconds%60];
+        ['days','hours','minutes','seconds'].forEach((unit,i) => {
+          document.getElementById('cd-'+unit).innerText = String(values[i]).padStart(2,'0');
+        });
       }
 
       setInterval(updateCountdown, 1000);
