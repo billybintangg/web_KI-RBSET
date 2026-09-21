@@ -588,12 +588,13 @@
                   class="flex items-center justify-center space-x-2 text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-4"
                 >
                   <i class="fa-regular fa-clock text-brand-cyan text-base"></i>
-                  <span
-                    >Payment Deadline: September 21, 2026 · 23:59
-                    WIB</span
-                  >
+                  <span>Full Paper &amp; Project Development Deadline: September 25, 2026 · 23:59 WIB</span>
                 </div>
 
+                <p class="text-xs sm:text-sm text-slate-500 mb-4"><span
+                    >Payment Deadline: September 21, 2026 · 23:59
+                    WIB</span
+                  ></p>
                 <!-- Timer Display Cards -->
                 <div class="grid grid-cols-4 gap-2 sm:gap-3">
                   <div
@@ -1254,7 +1255,7 @@
                 class="inline-flex items-center space-x-2 text-brand-dark font-semibold text-sm bg-brand-light/60 border border-brand-cyan/20 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-brand-cyan"></i>
-                <span>September 18–20, 2026</span>
+                <span>September 18–25, 2026</span>
               </div>
             </div>
           </div>
@@ -2812,7 +2813,9 @@
           link.removeAttribute('tabindex');
         }
         link.classList.toggle('payment-disabled', closed);
-        const seconds = Math.max(0, Math.floor(difference / 1000));
+        const developmentDeadline = new Date("2026-09-25T23:59:00+07:00").getTime();
+        const developmentDifference = developmentDeadline - Date.now();
+        const seconds = Math.max(0, Math.floor(developmentDifference / 1000));
         const values = [Math.floor(seconds/86400), Math.floor(seconds/3600)%24, Math.floor(seconds/60)%60, seconds%60];
         ['days','hours','minutes','seconds'].forEach((unit,i) => {
           document.getElementById('cd-'+unit).innerText = String(values[i]).padStart(2,'0');
