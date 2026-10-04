@@ -580,7 +580,7 @@
                   class="flex items-center justify-center space-x-2 text-xs sm:text-sm font-bold text-slate-700 uppercase tracking-wider mb-4"
                 >
                   <i class="fa-regular fa-clock text-brand-cyan text-base"></i>
-                  <span>Presentation Day: October 5, 2026 · 08:00 WIB</span>
+                  <span>Presentation Day: October 6, 2026 · 07:30 WIB</span>
                 </div>
 
                 <p id="presentation-status" role="status" class="text-sm text-brand-blue font-bold mb-4">Countdown to Presentation Day</p>
@@ -720,7 +720,7 @@
                       >
                     </div>
                     <span class="text-xs text-brand-blue font-bold"
-                      >October 5, 2026 · 08:00 WIB</span
+                      >October 6, 2026 · 07:30 WIB</span
                     >
                   </div>
                 </div>
@@ -753,6 +753,12 @@
     <h2 class="text-3xl sm:text-4xl font-extrabold text-brand-dark">The Finalists Have Been Announced!</h2>
     <p class="mt-4 text-slate-600">View the official announcement to check the finalist results.</p>
     <a href="https://drive.google.com/file/d/1rt_0LbRydNe8Av54ENYdt82CPzo0yqdw/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 mt-6 px-6 py-4 rounded-xl bg-brand-gradient text-white font-bold shadow-brand">View Finalist Announcement <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+
+    <div class="mt-8 pt-8 border-t border-brand-cyan/20">
+      <h3 class="text-xl font-bold text-brand-dark">Proposal &amp; PPT Submission</h3>
+      <p class="mt-3 text-slate-600">Each finalist team is required to submit its proposal and presentation slides before Presentation Day.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeSTdDTTMCIXgctoEM1lvxAX7hn1elCuzwW04Db8DkRcax-rA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 mt-5 px-6 py-4 rounded-xl bg-brand-blue text-white font-bold hover:opacity-90 transition-colors">Submit Proposal &amp; PPT <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
   </div>
 </section>
     <section id="about" class="py-20 bg-white border-y border-slate-100">
@@ -1349,7 +1355,7 @@
                 class="inline-flex items-center space-x-2 text-orange-800 font-bold text-sm bg-orange-200/50 border border-orange-300/50 px-3.5 py-1.5 rounded-lg relative z-10"
               >
                 <i class="far fa-calendar-alt text-orange-600"></i>
-                <span>October 5, 2026 · 08:00 WIB</span>
+                <span>October 6, 2026 · 07:30 WIB</span>
               </div>
             </div>
           </div>
@@ -2762,7 +2768,7 @@
       }
 
       function updatePresentationCountdown() {
-        const presentationDate = new Date("2026-10-05T08:00:00+07:00").getTime();
+        const presentationDate = new Date("2026-10-06T07:30:00+07:00").getTime();
         const difference = presentationDate - Date.now();
         const seconds = Math.max(0, Math.floor(difference / 1000));
         const values = [Math.floor(seconds/86400), Math.floor(seconds/3600)%24, Math.floor(seconds/60)%60, seconds%60];
